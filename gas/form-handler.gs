@@ -1,5 +1,10 @@
 /**
+ * @OnlyCurrentDoc
+ *
  * PromeonWeb 無料採用Web診断フォーム 受付スクリプト（Google Apps Script）
+ *
+ * 権限：このスクリプトを紐づけたスプレッドシートのみ（spreadsheets.currentonly）と
+ *       メール送信のみ（script.send_mail）。Drive全体・Gmailの読み取りは使いません。
  *
  * 動き：
  *   1. LPのフォームから送られた内容をスプレッドシートに1行追加
@@ -14,7 +19,7 @@
    --------------------------------------------------------- */
 const SETTINGS = {
   // 通知を受け取るメールアドレス（既存の問い合わせ用アドレス）
-  NOTIFY_EMAIL: 'contact@example.com',
+  NOTIFY_EMAIL: 'satokazu.promeon@gmail.com',
 
   // 自動返信メールの差出人名
   SENDER_NAME: 'PromeonWeb',

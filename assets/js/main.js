@@ -8,13 +8,13 @@
 const CONFIG = {
   // Google Apps Script を「ウェブアプリ」としてデプロイしたときのURL
   // 例: https://script.google.com/macros/s/XXXXXXXXXXXX/exec
-  GAS_ENDPOINT: '',
+  GAS_ENDPOINT: 'https://script.google.com/macros/s/AKfycbzOtZm8ochX9cPmxAKuhGfN2qBDDQNqxMgxEcRn0epIa8xssP9KbTJeusoYLPotJRuv/exec',
 
   // Googleアナリティクス4 の測定ID（例: G-XXXXXXXXXX）。空欄なら計測しません
   GA4_ID: '',
 
   // 問い合わせ用メールアドレス（フッターの表示に使います）
-  CONTACT_EMAIL: 'contact@example.com',
+  CONTACT_EMAIL: 'satokazu.promeon@gmail.com',
 };
 
 (function () {
