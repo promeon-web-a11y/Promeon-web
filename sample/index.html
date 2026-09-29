@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>採用情報｜札幌みらい設備株式会社（制作サンプル）</title>
+  <meta name="description" content="PromeonWebが制作する採用ページのサンプルです。札幌みらい設備株式会社は架空の会社で、掲載している人物・数値はすべて架空です。">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1c4f8f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sample.css">
+</head>
+<body>
+
+<!-- アイコン -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-person" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.2 3.6-6.5 8-6.5s8 2.3 8 6.5"/></symbol>
+  <symbol id="i-pipe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11a4 4 0 0 1 4 4v8"/><path d="M3 11h9a2 2 0 0 1 2 2v6"/><path d="M12 19h8"/></symbol>
+  <symbol id="i-air" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="3" y="5" width="18" height="8" rx="1.5"/><path d="M6 10h12M7 17l-1 3M12 17v3M17 17l1 3"/></symbol>
+  <symbol id="i-drop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3s6 6.8 6 11a6 6 0 0 1-12 0c0-4.2 6-11 6-11z"/></symbol>
+  <symbol id="i-snow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 2v20M4 7l16 10M20 7 4 17M9 3.5 12 6l3-2.5M9 20.5l3-2.5 3 2.5"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></symbol>
+  <symbol id="i-house" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 21V10l9-7 9 7v11"/><path d="M9 21v-6h6v6"/></symbol>
+  <symbol id="i-team" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="8" cy="9" r="3"/><circle cx="16.5" cy="9" r="3"/><path d="M2.5 20c0-3.3 2.5-5 5.5-5s5.5 1.7 5.5 5M13 15.3c1-.2 2.2-.3 3.5-.3 3 0 5 1.7 5 5"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 3 4 6v6c0 4.5 3.4 8 8 9 4.6-1 8-4.5 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></symbol>
+  <symbol id="i-yen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="m6 4 6 8 6-8M12 12v8M7 13h10M7 17h10"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M3 16v-4l2-5h11l3 5h2v4z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></symbol>
+  <symbol id="i-coat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M9 3h6l5 4-2 4-2-1v11H8V10l-2 1-2-4z"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 20s-8-4.6-8-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5C20 15.4 12 20 12 20z"/></symbol>
+  <symbol id="i-cup" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 9h13v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5z"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17M8 3v3M12 3v3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+</svg>
+
+<p class="demo-bar"><b>制作サンプル</b>このページは採用ページの見本です。会社・人物・数値はすべて架空です。</p>
+
+<header class="hd">
+  <div class="col">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"><svg width="18" height="18"><use href="#i-drop"/></svg></span>
+      <span class="brand-name">札幌みらい設備株式会社<small>施工スタッフ採用情報</small></span>
+    </a>
+    <a class="hd-btn" href="#apply">応募する</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== ヒーロー ===== -->
+  <section class="hero">
+    <figure class="ph hero-ph">
+      <svg><use href="#i-team"/></svg>
+      <figcaption>写真：現場前で並ぶ施工スタッフ（笑顔で）</figcaption>
+    </figure>
+    <div class="col hero-body">
+      <div class="hero-card">
+        <div class="hero-tags">
+          <span class="hl">未経験OK</span><span>施工スタッフ</span><span>20〜35歳が活躍中</span><span>札幌市</span>
+        </div>
+        <h1>工具の名前も<br class="sp">知らなかった人が、<br><span class="mark">3年後には<br class="sp">現場を任されています。</span></h1>
+        <p class="lead">札幌で、水道とエアコンの工事をしている社員18名の会社です。いま働く施工スタッフの半分以上は、未経験からのスタートでした。まずは「どんな職場か」をのぞいてみてください。</p>
+        <div class="hero-cta">
+          <a class="btn btn-sun" href="#apply" data-wish="応募">応募する（1分）</a>
+          <a class="btn btn-line" href="#apply" data-wish="見学">まずは会社見学</a>
+        </div>
+        <ul class="nums" aria-label="数字で見る札幌みらい設備">
+          <li class="num"><b>18<small>名</small></b><span>社員数（施工14名）</span></li>
+          <li class="num"><b>31<small>歳</small></b><span>施工スタッフ平均年齢</span></li>
+          <li class="num"><b>8<small>/14名</small></b><span>未経験から入社</span></li>
+          <li class="num"><b>110<small>日</small></b><span>年間休日</span></li>
+        </ul>
+        <p class="nums-note">2026年4月時点（サンプル用の架空の数値）</p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="toc" aria-label="ページ内の目次">
+    <ul>
+      <li><a href="#about">会社について</a></li>
+      <li><a href="#work">仕事内容</a></li>
+      <li><a href="#day">1日の流れ</a></li>
+      <li><a href="#grow">仕事の覚え方</a></li>
+      <li><a href="#staff">社員紹介</a></li>
+      <li><a href="#pay">給与</a></li>
+      <li><a href="#holiday">休日</a></li>
+      <li><a href="#benefit">福利厚生</a></li>
+      <li><a href="#license">資格支援</a></li>
+      <li><a href="#faq">よくある質問</a></li>
+      <li><a href="#requirements">募集要項</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== 会社について ===== -->
+  <section class="sec white" id="about">
+    <div class="col about">
+      <div class="sec-head">
+        <span class="no">ABOUT</span>
+        <h2>水とエアコンで、<br class="sp">札幌の暮らしを支える会社です。</h2>
+      </div>
+      <p>札幌みらい設備は、2011年に札幌市白石区で始まった設備工事の会社です。蛇口をひねれば水が出る、スイッチを入れれば部屋が暖まる。そんな当たり前を、配管とエアコンの工事で支えています。</p>
+      <figure class="ph warm">
+        <svg><use href="#i-house"/></svg>
+        <figcaption>写真：事務所と資材倉庫（朝の積み込み風景）</figcaption>
+      </figure>
+      <p>お客さまは、地元の工務店・リフォーム会社・管理会社が中心。新しく建つ住宅の配管工事から、マンションの給湯器交換、店舗のエアコン入れ替えまで、年間およそ900件の工事を担当しています。現場はほとんどが札幌市内と近郊で、泊まりの出張はありません。</p>
+      <ul class="works">
+        <li><b>給排水設備工事</b>住宅・マンション・店舗の水道管、排水管、トイレやキッチンまわりの工事</li>
+        <li><b>空調設備工事</b>家庭用・業務用エアコンの取り付け、入れ替え</li>
+        <li><b>修理・メンテナンス</b>水漏れ、つまり、凍結による水道管の破裂などの修理</li>
+      </ul>
+      <p class="season"><b>北海道ならではの季節の仕事</b><br>夏はエアコン工事、冬は水道管の凍結修理が増えるので、1年を通して仕事が途切れません。「季節によって仕事がない」という心配はほとんどありません。</p>
+    </div>
+  </section>
+
+  <!-- ===== 代表メッセージ ===== -->
+  <section class="sec blue" id="message">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">MESSAGE</span>
+        <h2>代表メッセージ</h2>
+      </div>
+      <div class="ceo">
+        <figure class="ph gray">
+          <svg><use href="#i-person"/></svg>
+          <figcaption>写真：代表 三浦</figcaption>
+        </figure>
+        <div>
+          <p class="ceo-catch">「見て覚えろ」は、<br><em>うちではやりません。</em></p>
+          <blockquote>
+            <p>私がこの仕事を始めたのは22歳のとき。前職はガソリンスタンドの店員で、パイプレンチという道具の名前すら知りませんでした。当時は「見て覚えろ」が当たり前で、何度も辞めようと思いました。</p>
+            <p>だから自分の会社では、教え方を決めています。最初の1年は必ず先輩とペアで現場に入ること。分からないことは何回聞いてもいいこと。できるようになったことは、ちゃんと給料に反映すること。</p>
+            <p>経験は問いません。時間を守れる人、「分かりません」と言える人なら大丈夫です。手に職をつけて、長く食べていける技術を一緒に身につけましょう。</p>
+          </blockquote>
+          <p class="ceo-sign"><small>札幌みらい設備株式会社 代表取締役</small>三浦 健太</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 仕事内容 ===== -->
+  <section class="sec" id="work">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">WORK</span>
+        <h2>仕事内容</h2>
+        <p>施工スタッフは、2〜3人のチームで現場に行き、配管やエアコンの工事をします。1日に回る現場は1〜3か所ほどです。</p>
+      </div>
+      <div class="jobs">
+        <article class="job">
+          <figure class="ph"><svg><use href="#i-pipe"/></svg><figcaption>写真：床下で配管をつなぐ作業</figcaption></figure>
+          <div class="job-body">
+            <h3>給排水設備工事</h3>
+            <p>新築住宅やマンションで、水道管と排水管を通す工事です。図面を見ながら管を切り、つなぎ、水漏れがないかを確かめます。完成すると壁や床で見えなくなる、建物の「血管」をつくる仕事です。</p>
+            <div class="job-where"><span>新築住宅</span><span>マンション</span><span>店舗</span></div>
+            <p class="job-first"><b>入社してすぐに担当すること</b>部材の運搬、配管を切る・測るお手伝い、使った道具の片付け</p>
+          </div>
+        </article>
+        <article class="job">
+          <figure class="ph warm"><svg><use href="#i-air"/></svg><figcaption>写真：室内機を取り付ける先輩と後輩</figcaption></figure>
+          <div class="job-body">
+            <h3>空調設備工事</h3>
+            <p>家庭用・業務用エアコンの取り付けや入れ替えを行います。室内機・室外機の設置と、その間をつなぐ配管が主な作業です。取り付けた日にお客さまから「涼しくなった！」と言ってもらえる仕事です。</p>
+            <div class="job-where"><span>一般住宅</span><span>事務所</span><span>飲食店</span></div>
+            <p class="job-first"><b>入社してすぐに担当すること</b>古いエアコンの取り外し、配管に保温材を巻く作業</p>
+          </div>
+        </article>
+        <article class="job">
+          <figure class="ph snow"><svg><use href="#i-snow"/></svg><figcaption>写真：冬の凍結修理に向かう社用車</figcaption></figure>
+          <div class="job-body">
+            <h3>修理・メンテナンス</h3>
+            <p>「水が出ない」「トイレがつまった」「冬に水道管が凍って破裂した」といった困りごとに駆けつけて直します。直した瞬間にお客さまの顔がほっとするのが分かる、ありがとうを一番近くで聞ける仕事です。</p>
+            <div class="job-where"><span>一般住宅</span><span>アパート</span></div>
+            <p class="job-first"><b>入社してすぐに担当すること</b>先輩に同行して、症状の聞き取りと部品の準備</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="honest">
+        <h3>正直にお伝えしておくこと</h3>
+        <ul>
+          <li>床下や天井裏など、狭い場所に入る作業があります</li>
+          <li>夏の屋外作業は暑く、冬の現場は寒いです（防寒着は会社で支給します）</li>
+          <li>7〜8月のエアコン繁忙期と、1〜2月の凍結シーズンは残業が増えます</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 1日の流れ ===== -->
+  <section class="sec white" id="day">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">ONE DAY</span>
+        <h2>仕事の1日の流れ</h2>
+        <p>入社2年目・中村さん（仮名）の1日です。季節で仕事の中身が変わります。</p>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="季節の切り替え">
+        <button class="tab" role="tab" id="tab-summer" aria-controls="day-summer" aria-selected="true">☀ 夏の1日</button>
+        <button class="tab" role="tab" id="tab-winter" aria-controls="day-winter" aria-selected="false" tabindex="-1">❄ 冬の1日</button>
+      </div>
+
+      <div class="day-who">
+        <figure class="ph"><svg><use href="#i-person"/></svg><figcaption>中村さん</figcaption></figure>
+        <p><b>中村 翔太さん（仮名）・24歳</b>入社2年目／前職はコンビニのアルバイト</p>
+      </div>
+
+      <div id="day-summer" role="tabpanel" aria-labelledby="tab-summer">
+        <ol class="tl">
+          <li><time>7:45</time><h3>事務所に集合・朝礼</h3><p>今日の現場を確認して、社用車に部材と工具を積み込みます。</p></li>
+          <li><time>8:30</time><h3>1件目：エアコンの取り付け</h3><p>一戸建てで、リビングのエアコンを入れ替え。古い機械を外して、新しい室内機を取り付けます。</p><span class="aside">室外機の固定は中村さんの担当</span></li>
+          <li><time>10:00</time><h3>小休憩</h3><p>夏場は水分補給のために、こまめに休憩をとります。</p></li>
+          <li><time>11:00</time><h3>2件目：事務所のエアコン入れ替え</h3><p>先輩が配管、中村さんは室外機まわり。お昼までに試運転まで終わらせます。</p></li>
+          <li><time>12:00</time><h3>お昼休み（60分）</h3><p>近くのラーメン屋さんか、コンビニで買って車の中で。先輩と行くことが多いです。</p><span class="aside">冷房の効いた車内で休めます</span></li>
+          <li><time>13:00</time><h3>3件目：新築住宅の配管工事</h3><p>床下に水道管と排水管を通します。図面の読み方を先輩に教わりながら進めます。</p></li>
+          <li><time>16:45</time><h3>片付け・事務所へ</h3><p>現場を掃除して撤収。道具を片付け、スマホで日報を送ります。</p></li>
+          <li><time>17:30</time><h3>退勤</h3><p>繁忙期以外はほぼこの時間。家が近い現場の日は直帰もOKです。</p></li>
+        </ol>
+      </div>
+
+      <div id="day-winter" role="tabpanel" aria-labelledby="tab-winter" hidden>
+        <ol class="tl">
+          <li><time>7:45</time><h3>事務所に集合・朝礼</h3><p>夜のうちに入った「水が出ない」という連絡を確認して、回る順番を決めます。</p></li>
+          <li><time>8:30</time><h3>1件目：凍った水道管の解凍</h3><p>アパートの1室。凍った部分を専用の機械で温めて、水が出るようにします。</p><span class="aside">冬は修理の依頼が一気に増えます</span></li>
+          <li><time>10:00</time><h3>2件目：破裂した水道管の交換</h3><p>凍って割れた管を切り取り、新しい管に交換します。先輩の横で手順を覚えます。</p></li>
+          <li><time>12:00</time><h3>お昼休み（60分）</h3><p>冬は温かいスープカレー屋さんが人気。車のエンジンをかけて暖まりながら休むことも。</p></li>
+          <li><time>13:00</time><h3>3件目：マンションの給湯器交換</h3><p>お湯が出なくなった給湯器を新しいものに取り替えます。</p><span class="aside">お客さまへの使い方説明は中村さんの担当</span></li>
+          <li><time>15:30</time><h3>4件目：凍結防止のアドバイス</h3><p>修理したお宅に「水抜き」のやり方を説明します。同じ故障を防ぐのも大事な仕事です。</p></li>
+          <li><time>17:00</time><h3>事務所に戻る</h3><p>使った部品を補充して、翌日の準備をします。</p></li>
+          <li><time>18:00</time><h3>退勤</h3><p>凍結シーズンは1日30分〜1時間ほど残業があります。残業代は1分単位で支給。</p></li>
+        </ol>
+      </div>
+      <p class="day-note">現場によって時間は前後します。雪の日は移動に時間がかかるため、1日に回る件数を減らして予定を組みます。</p>
+    </div>
+  </section>
+
+  <!-- ===== 未経験から仕事を覚える流れ ===== -->
+  <section class="sec blue" id="grow">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">GROWTH</span>
+        <h2>未経験から、<br class="sp">仕事を覚える流れ</h2>
+        <p>「いつまでに何ができればいいか」を先に決めているので、焦らず覚えられます。</p>
+      </div>
+      <ol class="road">
+        <li><span class="when">入社1週間</span><h3>安全のルールと道具を覚える</h3><p>事務所で安全教育を受けたあと、先輩の現場に同行。道具と部材の名前を覚えるところから始めます。</p><p class="can">道具を渡す、部材を運ぶ</p></li>
+        <li><span class="when">1〜3か月</span><h3>先輩とペアで作業を手伝う</h3><p>配管を測って切る、保温材を巻くなど、1つずつ作業を任されます。毎週、先輩と「できたこと」を振り返ります。</p><p class="can">配管の切断、エアコンの取り外し</p></li>
+        <li><span class="when">半年</span><h3>簡単な工事を自分の手で</h3><p>先輩が見ている前で、蛇口の交換やエアコンの取り付けを最初から最後までやってみます。</p><p class="can">蛇口・トイレ部品の交換、家庭用エアコンの取り付け</p></li>
+        <li><span class="when">1年</span><h3>最初の資格に挑戦</h3><p>第二種電気工事士など、仕事に直結する資格を取ります。費用は全額会社が負担します。</p><p class="can">小さな修理を一人で担当</p></li>
+        <li><span class="when">3年</span><h3>現場のリーダーに</h3><p>後輩と2人で現場に入り、段取りを任されます。給水装置工事主任技術者などの国家資格にも挑戦します。</p><p class="can">住宅1軒分の配管工事を段取りから担当</p></li>
+        <li><span class="when">5年〜</span><h3>現場の責任者・教える立場へ</h3><p>2級管工事施工管理技士を取得し、大きな現場の管理も。今度はあなたが後輩に教える番です。</p></li>
+      </ol>
+      <div class="buddy">
+        <h3>ひとりにしない「ペア制度」</h3>
+        <p>入社から1年間は、同じ先輩とペアを組みます。現場だけでなく、仕事の悩みや休みの相談もまずはペアの先輩に。月に1回は代表との面談もあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 社員紹介 ===== -->
+  <section class="sec" id="staff">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">STAFF</span>
+        <h2>一緒に働く人たち</h2>
+        <p>施工スタッフは20代〜50代の14名。前の仕事もさまざまです。</p>
+      </div>
+      <div class="staff">
+        <article class="person">
+          <div class="person-top">
+            <figure class="ph"><svg><use href="#i-person"/></svg><figcaption>中村さん</figcaption></figure>
+            <div><p class="role">施工スタッフ｜入社2年目・24歳</p><h3>中村 翔太さん（仮名）</h3><span class="before">前職：コンビニのアルバイト</span></div>
+          </div>
+          <dl class="person-qa">
+            <dt>入社したきっかけ</dt>
+            <dd>このまま何も身につかないのは不安で、「手に職」がつく仕事を探していました。見学に来たとき、先輩たちが普通に笑いながら話していて、怖い職人のイメージが変わりました。</dd>
+            <dt>最初に大変だったこと</dt>
+            <dd>道具の名前が全然覚えられなくて。先輩が名前と写真のリストをLINEで送ってくれて、それを見ながら覚えました。</dd>
+            <dt>いまの目標</dt>
+            <dd>今年中に第二種電気工事士を取ることです。</dd>
+          </dl>
+          <p class="person-quote">「初めて一人で直した蛇口から水が出たとき、ちょっと感動しました」</p>
+        </article>
+
+        <article class="person">
+          <div class="person-top">
+            <figure class="ph warm"><svg><use href="#i-person"/></svg><figcaption>佐々木さん</figcaption></figure>
+            <div><p class="role">施工スタッフ｜入社5年目・29歳</p><h3>佐々木 美咲さん（仮名）</h3><span class="before">前職：アパレル販売</span></div>
+          </div>
+          <dl class="person-qa">
+            <dt>入社したきっかけ</dt>
+            <dd>実家の給湯器が壊れたときに来てくれた職人さんがかっこよくて。女性でもできるか不安でしたが、重いものは2人で運ぶルールがあるので問題ありませんでした。</dd>
+            <dt>この仕事の好きなところ</dt>
+            <dd>お客さまに「女性の方だと安心」と言われることが多いんです。接客の経験がそのまま役に立っています。</dd>
+            <dt>働き方</dt>
+            <dd>土曜は交代で休めるので、趣味のキャンプにもよく行っています。</dd>
+          </dl>
+          <p class="person-quote">「前の仕事の経験も、ちゃんと役に立っています」</p>
+        </article>
+
+        <article class="person">
+          <div class="person-top">
+            <figure class="ph gray"><svg><use href="#i-person"/></svg><figcaption>高田さん</figcaption></figure>
+            <div><p class="role">現場リーダー｜入社9年目・34歳</p><h3>高田 大輔さん（仮名）</h3><span class="before">前職：運送会社のドライバー</span></div>
+          </div>
+          <dl class="person-qa">
+            <dt>いまの仕事</dt>
+            <dd>現場の段取りと、後輩2人のペア役をしています。去年、2級管工事施工管理技士を取りました。</dd>
+            <dt>後輩に教えるとき大事にしていること</dt>
+            <dd>「なぜこうするのか」まで説明することです。理由が分かると覚えるのが早いし、応用もきくようになります。</dd>
+            <dt>家族との時間</dt>
+            <dd>子どもが2人います。日曜・祝日はしっかり休めるので、休みの日は家族と過ごしています。</dd>
+          </dl>
+          <p class="person-quote">「未経験で入った自分が、いまは教える側。だから気持ちが分かります」</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 給与 ===== -->
+  <section class="sec white" id="pay">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">SALARY</span>
+        <h2>給与</h2>
+        <p>できることが増えれば、給料に反映します。年1回の昇給のほか、資格を取るたびに手当が増えます。</p>
+      </div>
+      <div class="pay-main">
+        <p class="lbl">未経験からのスタート</p>
+        <p class="amt">月給 24<small>万円〜</small></p>
+        <p>経験者は 月給28万円〜40万円（経験・資格により決定）</p>
+      </div>
+      <ul class="models" aria-label="年収の例">
+        <li class="model"><p class="who">入社1年目・22歳<small>未経験で入社</small></p><p class="y">340<small>万円</small></p><span class="bar"><i style="width:61%"></i></span></li>
+        <li class="model"><p class="who">入社5年目・28歳<small>資格2つ取得</small></p><p class="y">450<small>万円</small></p><span class="bar"><i style="width:80%"></i></span></li>
+        <li class="model"><p class="who">入社10年目・34歳<small>現場リーダー</small></p><p class="y">560<small>万円</small></p><span class="bar"><i style="width:100%"></i></span></li>
+      </ul>
+      <ul class="allow">
+        <li><b>賞与 年2回</b>昨年実績 合計2.5か月分</li>
+        <li><b>残業代</b>1分単位で全額支給</li>
+        <li><b>資格手当</b>月3,000〜20,000円</li>
+        <li><b>家族手当</b>配偶者1万円・子1人5千円</li>
+      </ul>
+      <p class="small-note">※年収例・実績はすべてサンプル用の架空の数値です。</p>
+    </div>
+  </section>
+
+  <!-- ===== 休日 ===== -->
+  <section class="sec" id="holiday">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">HOLIDAY</span>
+        <h2>休日</h2>
+        <p>日曜・祝日は必ず休み。土曜は交代で月3回休めます。</p>
+      </div>
+      <div class="off-grid">
+        <p class="off"><b>110<small>日</small></b><span>年間休日</span></p>
+        <p class="off"><b>9<small>日</small></b><span>有給の平均取得日数</span></p>
+        <p class="off"><b>5<small>日</small></b><span>夏休み・冬休み（各）</span></p>
+      </div>
+
+      <div class="cal">
+        <h3>ある月の休み方（2026年11月の例）</h3>
+        <div class="cal-grid" aria-label="2026年11月の休日の例。休みは1、3、7、8、15、21、22、23、28、29日の計10日">
+          <span class="h">日</span><span class="h">月</span><span class="h">火</span><span class="h">水</span><span class="h">木</span><span class="h">金</span><span class="h">土</span>
+          <span class="off-d">1</span><span>2</span><span class="off-d">3</span><span>4</span><span>5</span><span>6</span><span class="off-d">7</span>
+          <span class="off-d">8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span>
+          <span class="off-d">15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span><span class="off-d">21</span>
+          <span class="off-d">22</span><span class="off-d">23</span><span>24</span><span>25</span><span>26</span><span>27</span><span class="off-d">28</span>
+          <span class="off-d">29</span><span>30</span>
+        </div>
+        <p class="cal-legend"><span><i></i>休み（この月は10日）</span></p>
+      </div>
+
+      <ul class="long-off">
+        <li><span>夏季休暇</span><b>8月中旬に5日間</b></li>
+        <li><span>年末年始休暇</span><b>12/30〜1/4の6日間</b></li>
+        <li><span>ゴールデンウィーク</span><b>カレンダー通り＋α</b></li>
+        <li><span>その他</span><b>有給・慶弔休暇・育児休業</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 福利厚生 ===== -->
+  <section class="sec white" id="benefit">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">BENEFITS</span>
+        <h2>福利厚生</h2>
+      </div>
+      <ul class="benefits">
+        <li class="benefit"><span class="ic"><svg><use href="#i-shield"/></svg></span><h3>社会保険完備</h3><p>健康保険・厚生年金・雇用保険・労災保険</p></li>
+        <li class="benefit"><span class="ic"><svg><use href="#i-yen"/></svg></span><h3>退職金制度</h3><p>勤続3年以上が対象</p></li>
+        <li class="benefit"><span class="ic"><svg><use href="#i-coat"/></svg></span><h3>作業着・防寒着を支給</h3><p>冬用の防寒着・安全靴も会社負担</p></li>
+        <li class="benefit"><span class="ic"><svg><use href="#i-tool"/></svg></span><h3>工具はすべて会社支給</h3><p>自分で買う必要はありません</p></li>
+        <li class="benefit"><span class="ic"><svg><use href="#i-car"/></svg></span><h3>マイカー通勤OK</h3><p>無料駐車場あり・通勤手当支給</p></li>
+        <li class="benefit"><span class="ic"><svg><use href="#i-house"/></svg></span><h3>住宅手当</h3><p>一人暮らしの方に月1万円</p></li>
+        <li class="benefit"><span class="ic"><svg><use href="#i-cup"/></svg></span><h3>夏のドリンク・冬のカイロ</h3><p>季節の現場グッズを支給</p></li>
+        <li class="benefit"><span class="ic"><svg><use href="#i-team"/></svg></span><h3>年2回の食事会</h3><p>夏のジンギスカンと忘年会（自由参加）</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== 資格取得支援 ===== -->
+  <section class="sec" id="license">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">LICENSE</span>
+        <h2>資格取得支援</h2>
+      </div>
+      <p class="support-lead">受験料・講習費・テキスト代は、すべて会社が負担します。<span>合格したら合格祝い金（1万〜5万円）を支給し、翌月から資格手当がつきます。試験前は勉強のために早上がりもできます。</span></p>
+      <ul class="lic">
+        <li><b>第二種電気工事士</b><span class="when">目安：入社1年目</span><span class="yen">月3,000円<small>資格手当</small></span></li>
+        <li><b>冷媒フロン類取扱技術者</b><span class="when">目安：入社1〜2年目</span><span class="yen">月3,000円<small>資格手当</small></span></li>
+        <li><b>給水装置工事主任技術者</b><span class="when">目安：入社3年目〜</span><span class="yen">月5,000円<small>資格手当</small></span></li>
+        <li><b>排水設備工事責任技術者</b><span class="when">目安：入社3年目〜</span><span class="yen">月5,000円<small>資格手当</small></span></li>
+        <li><b>2級管工事施工管理技士</b><span class="when">目安：入社5年目〜</span><span class="yen">月10,000円<small>資格手当</small></span></li>
+      </ul>
+      <p class="small-note">※普通自動車免許（AT限定）の方が入社後にMT免許へ切り替える費用も会社が負担します。</p>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="sec white" id="faq">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">FAQ</span>
+        <h2>よくある質問</h2>
+        <p>面接では聞きにくいことも、先にお答えしておきます。</p>
+      </div>
+      <div class="faq">
+        <details><summary>本当に未経験でも大丈夫ですか？</summary><div class="a">大丈夫です。施工スタッフ14名のうち8名が未経験からの入社です。最初の1年は先輩とペアで現場に入り、上の「仕事を覚える流れ」の順番で少しずつ覚えていきます。</div></details>
+        <details><summary>体力に自信がありません。</summary><div class="a">重いものを運ぶ場面はありますが、20kgを超えるものは必ず2人で運ぶルールです。最初の1〜2か月で体が慣れたという人がほとんどです。</div></details>
+        <details><summary>職人の世界は怖いイメージがあります。</summary><div class="a">怒鳴る・手を出すといった指導は禁止しています。月1回の代表面談で、困っていることを直接相談することもできます。見学の際に現場の雰囲気を実際に見てください。</div></details>
+        <details><summary>残業はどれくらいありますか？</summary><div class="a">平均は月12時間ほどです。7〜8月と1〜2月の繁忙期は月25時間ほどになることがあります。残業代は1分単位で全額支給します。</div></details>
+        <details><summary>冬の雪の日も仕事はありますか？</summary><div class="a">あります。冬は凍結の修理依頼が多い時期です。移動に時間がかかるため、1日に回る件数を減らして無理のない予定を組みます。防寒着とカイロは会社で支給します。</div></details>
+        <details><summary>車の免許はAT限定でも大丈夫ですか？</summary><div class="a">大丈夫です。社用車はAT車もあります。MT免許への切り替えを希望する場合は、その費用も会社が負担します。</div></details>
+        <details><summary>応募の前に会社を見学できますか？</summary><div class="a">できます。応募フォームの「ご希望」で「まずは会社見学」を選んでください。見学だけで帰っていただいても大丈夫です。私服で来てください。</div></details>
+        <details><summary>今の仕事を続けながら転職活動をしても大丈夫？</summary><div class="a">もちろんです。面接や見学は平日の夕方や土曜日にも対応します。入社日もご相談ください。</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 募集要項 ===== -->
+  <section class="sec" id="requirements">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">REQUIREMENTS</span>
+        <h2>募集要項</h2>
+      </div>
+      <dl class="req">
+        <div><dt>募集職種</dt><dd>施工スタッフ（給排水・空調設備工事）</dd></div>
+        <div><dt>雇用形態</dt><dd>正社員<small>試用期間3か月（給与・待遇の変更なし）</small></dd></div>
+        <div><dt>応募資格</dt><dd>普通自動車免許（AT限定可）<small>学歴・経験は問いません。20〜35歳くらいの方が多く活躍しています。</small></dd></div>
+        <div><dt>給与</dt><dd>月給24万円〜40万円<small>未経験の方は24万円から。経験・資格を考慮して決定します。</small></dd></div>
+        <div><dt>昇給・賞与</dt><dd>昇給 年1回（4月）／賞与 年2回（7月・12月）</dd></div>
+        <div><dt>手当</dt><dd>残業手当、資格手当、家族手当、住宅手当、通勤手当（上限月2万円）</dd></div>
+        <div><dt>勤務地</dt><dd>札幌市白石区の事務所に集合し、札幌市内・近郊の現場へ社用車で移動<small>泊まりの出張はありません</small></dd></div>
+        <div><dt>勤務時間</dt><dd>7:45〜17:30（休憩合計90分）</dd></div>
+        <div><dt>休日・休暇</dt><dd>日曜・祝日、土曜（月3回・交代制）、夏季休暇、年末年始休暇、有給休暇、慶弔休暇、育児休業<small>年間休日110日</small></dd></div>
+        <div><dt>福利厚生</dt><dd>社会保険完備、退職金制度、作業着・防寒着・安全靴支給、工具支給、マイカー通勤可、健康診断、資格取得費用全額負担</dd></div>
+        <div><dt>選考の流れ</dt><dd>応募 → 会社見学・面接（1回） → 内定<small>応募から内定まで2週間ほど。履歴書は面接当日で大丈夫です。</small></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ===== 応募フォーム ===== -->
+  <section class="sec blue" id="apply">
+    <div class="col">
+      <div class="sec-head">
+        <span class="no">ENTRY</span>
+        <h2>応募・会社見学のお申し込み</h2>
+        <p>お名前と電話番号だけで大丈夫です。履歴書は面接当日にお持ちください。</p>
+      </div>
+
+      <ol class="apply-flow">
+        <li>フォームから<br>応募</li>
+        <li>2日以内に<br>ご連絡</li>
+        <li>見学・面接<br>（1回）</li>
+        <li>内定</li>
+      </ol>
+
+      <div class="form">
+        <form id="apply-form" novalidate>
+          <p class="form-intro">入力は1分ほどで終わります。応募したからといって、必ず入社する必要はありません。</p>
+
+          <fieldset class="f">
+            <legend>ご希望<span class="must">必須</span></legend>
+            <div class="pick">
+              <label><input type="radio" name="wish" value="応募" checked>面接を受けたい</label>
+              <label><input type="radio" name="wish" value="見学">まずは会社見学</label>
+            </div>
+          </fieldset>
+
+          <div class="f">
+            <label for="a-name">お名前<span class="must">必須</span></label>
+            <input type="text" id="a-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="f">
+            <label for="a-kana">ふりがな<span class="any">任意</span></label>
+            <input type="text" id="a-kana" name="kana">
+          </div>
+          <div class="f">
+            <label for="a-tel">電話番号<span class="must">必須</span></label>
+            <input type="tel" id="a-tel" name="tel" autocomplete="tel" inputmode="tel" required placeholder="090-0000-0000">
+          </div>
+          <div class="f">
+            <label for="a-mail">メールアドレス<span class="any">任意</span></label>
+            <input type="email" id="a-mail" name="email" autocomplete="email" inputmode="email">
+          </div>
+          <div class="f">
+            <label for="a-age">年齢<span class="any">任意</span></label>
+            <select id="a-age" name="age">
+              <option value="">選んでください</option>
+              <option>18〜19歳</option><option>20〜24歳</option><option>25〜29歳</option><option>30〜35歳</option><option>36歳以上</option>
+            </select>
+          </div>
+          <fieldset class="f">
+            <legend>設備工事の経験<span class="any">任意</span></legend>
+            <div class="pick">
+              <label><input type="radio" name="exp" value="なし">なし</label>
+              <label><input type="radio" name="exp" value="あり">あり</label>
+            </div>
+          </fieldset>
+          <fieldset class="f">
+            <legend>連絡してほしい時間帯<span class="any">任意</span></legend>
+            <div class="pick">
+              <label><input type="radio" name="time" value="いつでも">いつでも</label>
+              <label><input type="radio" name="time" value="平日昼">平日の昼</label>
+              <label><input type="radio" name="time" value="平日夕方以降">平日の夕方以降</label>
+              <label><input type="radio" name="time" value="土曜">土曜日</label>
+            </div>
+          </fieldset>
+          <div class="f">
+            <label for="a-msg">聞いてみたいこと<span class="any">任意</span></label>
+            <textarea id="a-msg" name="message" placeholder="例：見学は私服で行っても大丈夫ですか？"></textarea>
+          </div>
+          <button type="submit" class="btn btn-sun">この内容で送信する</button>
+          <p class="form-note">※制作サンプルのため、実際には送信されません</p>
+        </form>
+
+        <div class="done" id="apply-done" hidden tabindex="-1">
+          <div class="ok" aria-hidden="true"><svg width="28" height="28"><use href="#i-check"/></svg></div>
+          <h3>送信ありがとうございました</h3>
+          <p>2日以内に、採用担当からお電話かメールでご連絡します。<br><br>（制作サンプルのため、実際には送信されていません。実際のページでは、この時点で会社の担当者にメールで通知が届きます）</p>
+        </div>
+      </div>
+
+      <p class="tel-box">お電話でも受け付けています<b>011-000-0000</b>平日 8:00〜17:30｜採用担当：三浦<br>（サンプル用の架空の番号です）</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ft">
+  <div class="col">
+    <p class="name">札幌みらい設備株式会社</p>
+    <dl>
+      <dt>所在地</dt><dd>北海道札幌市白石区</dd>
+      <dt>設立</dt><dd>2011年</dd>
+      <dt>従業員</dt><dd>18名</dd>
+      <dt>事業内容</dt><dd>給排水衛生設備工事・空調設備工事・設備の修理とメンテナンス</dd>
+    </dl>
+    <p class="demo">このページは <a href="../index.html" target="_top">PromeonWeb</a> が制作した採用ページの<b>制作サンプル</b>です。札幌みらい設備株式会社は架空の会社であり、掲載している人物・数値・電話番号はすべて架空のものです。写真の枠には、実際の制作では御社の写真が入ります。</p>
+  </div>
+</footer>
+
+<div class="dock" id="dock">
+  <a class="btn btn-line" href="#apply" data-wish="見学">見学したい</a>
+  <a class="btn btn-sun" href="#apply" data-wish="応募">応募する（1分）</a>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* 夏／冬の1日の切り替え */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  function selectTab(tab) {
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { selectTab(tab); });
+    tab.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      var next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+      selectTab(next);
+      next.focus();
+    });
+  });
+
+  /* 「見学」「応募」ボタンから来たら、フォームの希望を合わせる */
+  var form = document.getElementById('apply-form');
+  document.querySelectorAll('[data-wish]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var r = form.querySelector('input[name="wish"][value="' + a.dataset.wish + '"]');
+      if (r) r.checked = true;
+    });
+  });
+
+  /* 下部の応募バー：最初の画面と応募フォームが見えている間は隠す */
+  var dock = document.getElementById('dock');
+  if ('IntersectionObserver' in window) {
+    var seen = new Set();
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
+      dock.classList.toggle('is-hidden', seen.size > 0);
+    });
+    io.observe(document.querySelector('.hero-cta'));
+    io.observe(document.getElementById('apply'));
+  }
+
+  /* サンプル用：送信せずに完了表示だけ行う */
+  var done = document.getElementById('apply-done');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.reportValidity()) return;
+    form.hidden = true;
+    done.hidden = false;
+    done.focus();
+  });
+})();
+</script>
+</body>
+</html>
