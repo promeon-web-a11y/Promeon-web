@@ -84,15 +84,15 @@ a { color: var(--blue); }
   position: relative;
   overflow: hidden;
   border-radius: var(--r);
-  background: linear-gradient(150deg, #4f7fb8 0%, #1c4f8f 60%, #123a6b 100%);
+  background: #3d6798 repeating-linear-gradient(135deg, rgba(255,255,255,0.05) 0 2px, transparent 2px 14px);
   color: #fff;
   aspect-ratio: 4 / 3;
   display: grid;
   place-items: center;
 }
-.ph.warm { background: linear-gradient(150deg, #e7b25a 0%, #c98a2c 100%); }
-.ph.gray { background: linear-gradient(150deg, #8d99a6 0%, #5c6874 100%); }
-.ph.snow { background: linear-gradient(150deg, #bcd3ea 0%, #7fa3c7 100%); }
+.ph.warm { background-color: #b98a45; }
+.ph.gray { background-color: #6f7b87; }
+.ph.snow { background-color: #7f9fc0; }
 .ph svg { width: 34%; max-width: 120px; height: auto; aspect-ratio: 1; opacity: 0.6; }
 .ph figcaption {
   position: absolute; left: 10px; bottom: 10px; right: 10px;
@@ -108,7 +108,7 @@ a { color: var(--blue); }
 /* ---------- ヒーロー ---------- */
 .hero { background: var(--white); padding-bottom: 28px; }
 .hero-ph { aspect-ratio: 4 / 3.3; border-radius: 0; }
-@media (min-width: 720px) { .hero-ph { aspect-ratio: 16 / 7; } }
+@media (min-width: 720px) { .hero-ph { aspect-ratio: auto; height: 400px; } }
 .hero-body { position: relative; }
 .hero-card {
   background: var(--white);
@@ -185,6 +185,7 @@ a { color: var(--blue); }
 /* ---------- 会社について ---------- */
 .about p + p { margin-top: 14px; }
 .about .ph { margin: 20px 0; }
+@media (min-width: 720px) { .about .ph { aspect-ratio: 16 / 7; } }
 .works { display: grid; gap: 10px; margin-top: 20px; }
 @media (min-width: 620px) { .works { grid-template-columns: repeat(3, 1fr); } }
 .works li { background: var(--paper); border-radius: 12px; padding: 14px 16px; font-size: 14px; line-height: 1.7; }
@@ -211,6 +212,10 @@ a { color: var(--blue); }
 .jobs { display: grid; gap: 16px; }
 .job { background: var(--white); border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); }
 .job .ph { border-radius: 0; aspect-ratio: 16 / 9; }
+@media (min-width: 720px) {
+  .job { display: grid; grid-template-columns: 240px 1fr; }
+  .job .ph { aspect-ratio: auto; height: 100%; min-height: 220px; }
+}
 .job-body { padding: 18px; }
 .job-body h3 { font-size: 18px; color: var(--blue-dark); }
 .job-body > p { font-size: 14px; color: var(--ink-sub); margin-top: 6px; line-height: 1.8; }
@@ -298,9 +303,9 @@ a { color: var(--blue); }
 .model .y small { font-size: 12px; }
 .model .bar { grid-column: 1 / -1; height: 6px; border-radius: 3px; background: var(--blue-soft); overflow: hidden; }
 .model .bar i { display: block; height: 100%; background: var(--blue); border-radius: 3px; }
-.allow { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-.allow li { background: var(--white); border-radius: 10px; padding: 10px 12px; font-size: 13px; line-height: 1.6; border: 1px solid var(--line); }
-.allow b { display: block; font-size: 14px; }
+.allow { margin-top: 20px; border-top: 1px solid var(--line); }
+.allow li { display: grid; grid-template-columns: 7em 1fr; gap: 12px; padding: 10px 2px; border-bottom: 1px solid var(--line); font-size: 14px; line-height: 1.6; }
+.allow b { font-size: 14px; }
 .small-note { font-size: 12px; color: var(--ink-sub); margin-top: 10px; }
 
 /* ---------- 休日 ---------- */
@@ -322,13 +327,13 @@ a { color: var(--blue); }
 .long-off b { white-space: nowrap; }
 
 /* ---------- 福利厚生 ---------- */
-.benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-@media (min-width: 620px) { .benefits { grid-template-columns: repeat(4, 1fr); } }
-.benefit { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
-.benefit .ic { width: 34px; height: 34px; border-radius: 9px; background: var(--blue-soft); color: var(--blue); display: grid; place-items: center; margin-bottom: 8px; }
-.benefit .ic svg { width: 20px; height: 20px; }
-.benefit h3 { font-size: 14px; line-height: 1.5; }
-.benefit p { font-size: 12px; color: var(--ink-sub); line-height: 1.6; margin-top: 3px; }
+.benefits { border-top: 1px solid var(--line); }
+@media (min-width: 620px) { .benefits { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; } }
+.benefit { display: grid; grid-template-columns: 22px 1fr; gap: 0 12px; padding: 12px 2px; border-bottom: 1px solid var(--line); }
+.benefit .ic { color: var(--blue); grid-row: 1 / 3; padding-top: 3px; }
+.benefit .ic svg { width: 22px; height: 22px; }
+.benefit h3 { font-size: 15px; line-height: 1.6; }
+.benefit p { font-size: 13px; color: var(--ink-sub); line-height: 1.6; }
 
 /* ---------- 資格取得支援 ---------- */
 .support-lead { background: var(--sun-soft); border-radius: 12px; padding: 16px; font-size: 15px; font-weight: 700; line-height: 1.7; }

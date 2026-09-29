@@ -175,7 +175,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   margin-bottom: 10px;
 }
 .section-navy .section-head .eyebrow { color: #f3a466; }
-.section-head h2 { font-size: 24px; color: var(--navy-900); }
+.section-head h2 { font-size: 22px; color: var(--navy-900); }
 .section-navy .section-head h2 { color: #fff; }
 .section-head p { margin-top: 14px; color: var(--ink-sub); }
 .section-navy .section-head p { color: #c9d4e2; }
@@ -213,7 +213,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   font-style: normal;
   background: linear-gradient(transparent 62%, #ffd9b8 62%);
 }
-@media (min-width: 768px) { .hero h1 { font-size: 40px; } }
+@media (min-width: 768px) { .hero h1 { font-size: 34px; } }
 .hero-lead { margin-top: 20px; color: var(--ink-sub); font-size: 16px; }
 @media (min-width: 768px) { .hero-lead { font-size: 17px; } }
 .hero-lead strong { color: var(--ink); }
@@ -277,24 +277,24 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .check-list {
   max-width: 760px;
   margin: 0 auto;
-  display: grid;
-  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
 }
 .check-list li {
   display: flex;
   gap: 14px;
   align-items: flex-start;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 16px 18px;
+  padding: 14px 18px;
   font-weight: 500;
+  line-height: 1.7;
 }
+.check-list li + li { border-top: 1px solid var(--line); }
 .check-list li::before {
   content: "";
   flex: none;
   width: 22px; height: 22px;
-  margin-top: 3px;
+  margin-top: 2px;
   border: 2px solid var(--navy-700);
   border-radius: 4px;
   background:
@@ -305,12 +305,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   max-width: 760px;
   margin: 32px auto 0;
   text-align: center;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 700;
   color: var(--navy-900);
   line-height: 1.8;
 }
-.problem-conclusion span { color: var(--accent-dark); }
+@media (min-width: 768px) { .problem-conclusion { font-size: 19px; } }
+.problem-conclusion .em { color: var(--accent-dark); }
 
 /* ---------- Compare (ad vs. page) ---------- */
 .compare {
@@ -328,12 +329,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .compare-card h3 {
   font-size: 18px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
   margin-bottom: 14px;
 }
 .compare-card .tag {
+  display: table;
+  margin-bottom: 6px;
   font-size: 12px;
   font-weight: 700;
   padding: 2px 10px;
@@ -364,9 +364,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 @media (min-width: 768px) { .reason-points { grid-template-columns: repeat(3, 1fr); } }
 .reason-point {
-  background: var(--navy-50);
-  border-radius: var(--radius);
-  padding: 20px;
+  border-top: 2px solid var(--navy-700);
+  padding-top: 14px;
 }
 .reason-point h4 { font-size: 16px; color: var(--navy-900); margin-bottom: 6px; }
 .reason-point p { font-size: 14px; color: var(--ink-sub); line-height: 1.75; }
@@ -447,16 +446,19 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Deliverables ---------- */
 .deliverables {
-  display: grid;
-  gap: 16px;
-}
-@media (min-width: 768px) { .deliverables { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .deliverables { grid-template-columns: repeat(3, 1fr); } }
-.deliverable-group {
+  max-width: 900px;
+  margin: 0 auto;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  padding: 22px;
+}
+.deliverable-group { padding: 20px; }
+.deliverable-group + .deliverable-group { border-top: 1px solid var(--line); }
+@media (min-width: 768px) {
+  .deliverable-group { display: grid; grid-template-columns: 210px 1fr; gap: 24px; padding: 22px 28px; }
+  .deliverable-group .stage { align-self: start; justify-self: start; }
+  .deliverable-group ul { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px; }
+  .deliverable-group li { margin-top: 0; }
 }
 .deliverable-group .stage {
   display: inline-block;
@@ -486,13 +488,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .deliverable-group p { font-size: 14px; color: var(--ink-sub); line-height: 1.7; margin-top: 2px; }
 .deliverable-note {
-  margin-top: 28px;
-  background: var(--navy-50);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-  text-align: center;
+  max-width: 900px;
+  margin: 24px auto 0;
   font-size: 15px;
 }
+@media (min-width: 768px) { .deliverable-note { text-align: center; } }
 .deliverable-note strong { color: var(--navy-900); }
 
 /* ---------- Sample (phone mockup) ---------- */
@@ -500,7 +500,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (min-width: 900px) { .sample-grid { grid-template-columns: auto 1fr; gap: 56px; } }
 .phone {
   --phone-w: 300px;
-  --phone-scale: 0.8;
   width: var(--phone-w);
   margin: 0 auto;
   padding: 12px;
@@ -527,11 +526,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   background: #fff;
   position: relative;
 }
+/* サンプルを幅390pxのスマホとして描画し、276px幅の画面に縮小して表示 */
 .phone-screen iframe {
-  width: calc((var(--phone-w) - 24px) / var(--phone-scale));
-  height: calc(560px / var(--phone-scale));
+  width: 390px;
+  max-width: none;
+  height: 792px;
   border: 0;
-  transform: scale(var(--phone-scale));
+  transform: scale(0.7077);
   transform-origin: 0 0;
 }
 .sample-label {
@@ -627,7 +628,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   color: var(--navy-900);
 }
 .price-list { margin-top: 8px; display: grid; gap: 4px; font-size: 15px; }
-@media (min-width: 480px) { .price-card.is-main .price-list:not(.is-excluded) { grid-template-columns: 1fr 1fr; } }
+.price-card.is-main .price-list:not(.is-excluded) { grid-template-columns: 1fr 1fr; column-gap: 12px; }
 .price-list li { padding-left: 20px; position: relative; }
 .price-list li::before { content: "✓"; position: absolute; left: 0; color: var(--ok); font-weight: 700; }
 .price-list.is-excluded li::before { content: "−"; color: var(--ink-mute); }
@@ -648,8 +649,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   margin: 24px auto 0;
   font-size: 14px;
   color: var(--ink-sub);
-  text-align: center;
 }
+@media (min-width: 768px) { .price-why { text-align: center; } }
 
 /* ---------- Flow ---------- */
 .flow {
@@ -708,7 +709,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .faq summary {
   list-style: none;
   cursor: pointer;
-  padding: 18px 52px 18px 52px;
+  padding: 16px 44px 16px 46px;
   position: relative;
   font-weight: 700;
   color: var(--navy-900);
@@ -717,7 +718,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .faq summary::before {
   content: "Q";
   position: absolute;
-  left: 18px; top: 16px;
+  left: 18px; top: 14px;
   font-size: 18px;
   color: var(--navy-700);
 }
@@ -734,7 +735,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .faq details[open] summary::after { transform: rotate(-135deg); top: 28px; }
 .faq summary:focus-visible { outline: 3px solid var(--navy-700); outline-offset: -3px; border-radius: var(--radius); }
 .faq .answer {
-  padding: 0 20px 20px 52px;
+  padding: 0 20px 20px 46px;
   color: var(--ink-sub);
   position: relative;
 }
@@ -759,8 +760,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 }
 .diag-points b { display: block; color: #fff; font-size: 16px; }
 .diag-points span { color: #c9d4e2; font-size: 14px; }
-.diag-intro h2 { font-size: 26px; color: #fff; }
-@media (min-width: 768px) { .diag-intro h2 { font-size: 32px; } }
+.diag-intro h2 { font-size: 23px; color: #fff; }
+@media (min-width: 768px) { .diag-intro h2 { font-size: 30px; } }
+@media (min-width: 960px) { .diag-intro { position: sticky; top: calc(var(--header-h) + 24px); } }
 .diag-intro > p { margin: 14px 0 20px; color: #c9d4e2; }
 .diag-intro .eyebrow { color: #f3a466; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; display: block; margin-bottom: 10px; }
 .diag-promise {
@@ -908,3 +910,8 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .journey-step { padding: 18px 14px; }
   .journey-step h3 { font-size: 16px; }
 }
+
+/* ---------- 改行制御 ----------
+   .wb で囲んだまとまりの途中では改行しない（幅が足りない場合のみ中で折り返す） */
+.wb { display: inline-block; }
+h2, .problem-conclusion, .reason-summary, .journey-foot strong { text-wrap: balance; }
