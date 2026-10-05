@@ -28,6 +28,7 @@ docs/                        資料用（.vercelignore で公開対象から除�
   legacy/index-kensetu-lp.html  置き換え前のトップ（建設・設備工事会社向けLP）
 ```
 
+- **文章を書き換えたら**：`node docs/tools/phrase-breaks.mjs` を実行してください。日本語が文節の区切りでだけ折り返されるよう、HTMLに `<wbr>`（改行してよい位置）を入れ直します。CSSは `<wbr>`・句読点・空白の位置でだけ改行する設定（`word-break: keep-all`）なので、入れ忘れるとその文章だけ不自然な位置で折れます。`assets/js/site.js` のデモ文言は `--print "文章"` の結果を貼ります。文節の判定には Google の BudouX の日本語モデル（`docs/tools/budoux-ja.json`、Apache License 2.0）を使っています。
 - **ローカルで確認**：`node docs/screenshots/capture.mjs --serve` を実行し、`http://localhost:8000/` を開きます。
 - **診断フォーム**：既存の Google Apps Script 受付に `service=recruit` で送信します（送信先は `assets/js/site.js` の `GAS_ENDPOINT`）。スプレッドシートの「採用Web診断申込」シートに記録し、通知メールと自動返信（5営業日以内の案内）を送ります。
 - **Apps Script は更新済み**（2026-10-05、既存デプロイをバージョン2に更新。URLは変更なし）。`gas/form-handler.gs` を変更したときは、Apps Script エディタに貼り付けて保存し、**デプロイを管理 → 編集 → バージョン：新バージョン → デプロイ**で反映します（「新しいデプロイ」はURLが変わるので使わない）。

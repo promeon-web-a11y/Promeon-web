@@ -39,8 +39,8 @@
 
   /* ---------- Google検索 / AI検索 のタブ（トップ） ---------- */
   var searchText = {
-    google: '<p class="search-query">地域名　事務職　未経験　求人</p><p class="search-caption">地域 × 職種 × 経験 × 条件</p><div class="search-lines"><strong>未経験から始める仕事を、具体的に。</strong><p>研修の流れ・担当する業務・1年目の働き方。<br>御社だから答えられる情報が、求職者との接点になります。</p></div>',
-    ai: '<p class="search-query">未経験から始められて、研修がある会社は？</p><p class="search-caption">自然な言葉の質問にも、答えられる情報を。</p><div class="search-lines"><strong>企業の事実を、明確に揃える。</strong><p>勤務地、募集職種、働き方、教育体制。<br>企業情報とFAQを整理し、理解・参照されやすい状態を目指します。</p></div>'
+    google: '<p class="search-query">地域名　事務職　未経験　求人</p><p class="search-caption">地域 × 職種 × 経験 × 条件</p><div class="search-lines"><strong>未経験から<wbr>始める<wbr>仕事を、<wbr>具体的に。</strong><p>研修の<wbr>流れ・<wbr>担当する<wbr>業務・<wbr>1年目の<wbr>働き方。<br>御社だから<wbr>答えられる<wbr>情報が、<wbr>求職者との<wbr>接点に<wbr>なります。</p></div>',
+    ai: '<p class="search-query">未経験から<wbr>始められて、<wbr>研修が<wbr>ある<wbr>会社は？</p><p class="search-caption">自然な<wbr>言葉の<wbr>質問にも、<wbr>答えられる<wbr>情報を。</p><div class="search-lines"><strong>企業の<wbr>事実を、<wbr>明確に<wbr>揃える。</strong><p>勤務地、<wbr>募集職種、<wbr>働き方、<wbr>教育体制。<br>企業情報と<wbr>FAQを<wbr>整理し、<wbr>理解・<wbr>参照されやすい<wbr>状態を<wbr>目指します。</p></div>'
   };
   var searchPanel = document.querySelector('#search-content');
   var tabs = Array.prototype.slice.call(document.querySelectorAll('[data-search]'));
@@ -68,40 +68,42 @@
   }
 
   /* ---------- スマホ型デモ（トップ） ----------
-     すべて架空企業の制作サンプルです。実績として扱わないでください。 */
+     すべて架空企業の制作サンプルです。実績として扱わないでください。
+     文言の <wbr> は改行してよい位置（文節の区切り）。文言を変えたら
+     node docs/tools/phrase-breaks.mjs --print "文章" の結果を貼ってください。 */
   var jobSamples = {
     office: {
       company: 'つむぎオフィス',
-      catch: '日々の仕事を、チームで支える。',
-      title: 'あなたの気配りが、<br>チームの力になる。',
-      intro: '仕事の進め方を、先輩と一緒に少しずつ。チームで確認しながら、できることを増やしていきます。',
-      work: '資料の整理、データ入力、お問い合わせの確認。仲間と連携しながら、日々の業務を支える仕事です。',
+      catch: '日々の<wbr>仕事を、<wbr>チームで<wbr>支える。',
+      title: 'あなたの<wbr>気配りが、<br>チームの<wbr>力に<wbr>なる。',
+      intro: '仕事の<wbr>進め方を、<wbr>先輩と<wbr>一緒に<wbr>少しずつ。<wbr>チームで<wbr>確認しながら、<wbr>できる<wbr>ことを<wbr>増やしていきます。',
+      work: '資料の<wbr>整理、<wbr>データ入力、<wbr>お問い合わせの<wbr>確認。<wbr>仲間と<wbr>連携しながら、<wbr>日々の<wbr>業務を<wbr>支える<wbr>仕事です。',
       benefits: ['未経験歓迎', '研修あり', 'チームで仕事'],
       image: '/assets/img/team.webp',
       alt: 'オフィスで仕事をするチーム',
-      schedule: [['09:00', '今日の業務をチームで確認'], ['09:30', '書類整理・データ入力'], ['12:00', '昼休み'], ['13:00', '連絡対応・資料作成'], ['18:00', '引き継ぎ・退勤']]
+      schedule: [['09:00', '今日の<wbr>業務を<wbr>チームで<wbr>確認'], ['09:30', '書類整理・<wbr>データ入力'], ['12:00', '昼休み'], ['13:00', '連絡対応・<wbr>資料作成'], ['18:00', '引き継ぎ・<wbr>退勤']]
     },
     food: {
       company: 'つむぎカフェ',
-      catch: '一杯のコーヒーから、笑顔を。',
-      title: '好きな時間を、<br>誰かの笑顔に。',
-      intro: '接客も、ドリンクづくりも、少しずつ。先輩と一緒に、お客様が心地よく過ごせるお店をつくります。',
-      work: 'ご注文の受付、ドリンクづくり、お店の準備。お客様との会話を大切にしながら、チームで店舗を運営します。',
+      catch: '一杯の<wbr>コーヒーから、<wbr>笑顔を。',
+      title: '好きな<wbr>時間を、<br>誰かの笑顔に。',
+      intro: '接客も、<wbr>ドリンクづくりも、<wbr>少しずつ。<wbr>先輩と<wbr>一緒に、<wbr>お客様が<wbr>心地よく<wbr>過ごせる<wbr>お店を<wbr>つくります。',
+      work: 'ご注文の<wbr>受付、<wbr>ドリンクづくり、<wbr>お店の<wbr>準備。<wbr>お客様との<wbr>会話を<wbr>大切に<wbr>しながら、<wbr>チームで<wbr>店舗を<wbr>運営します。',
       benefits: ['接客の研修', 'シフト相談', 'チームで仕事'],
       image: '/assets/img/cafe.webp',
       alt: 'カフェでコーヒーを準備するスタッフ',
-      schedule: [['09:00', '開店準備・仕込み'], ['10:00', '接客・ドリンクづくり'], ['12:00', '交代で休憩'], ['13:00', '接客・店内の整理'], ['18:00', '引き継ぎ・退勤']]
+      schedule: [['09:00', '開店準備・<wbr>仕込み'], ['10:00', '接客・<wbr>ドリンクづくり'], ['12:00', '交代で<wbr>休憩'], ['13:00', '接客・<wbr>店内の<wbr>整理'], ['18:00', '引き継ぎ・<wbr>退勤']]
     },
     care: {
       company: 'つむぎケア',
-      catch: '一人ひとりの毎日に、寄り添う。',
-      title: 'あなたのやさしさが、<br>毎日の安心になる。',
-      intro: 'ご利用者の生活を、仲間と支える。研修や先輩との振り返りを通じて、一つずつ仕事を学んでいきます。',
-      work: '生活のお手伝い、活動のサポート、日々の記録。ご利用者のペースを大切にしながら、チームでケアを行います。',
+      catch: '一人<wbr>ひとりの<wbr>毎日に、<wbr>寄り添う。',
+      title: 'あなたの<wbr>やさしさが、<br>毎日の<wbr>安心に<wbr>なる。',
+      intro: 'ご利用者の<wbr>生活を、<wbr>仲間と<wbr>支える。<wbr>研修や<wbr>先輩との<wbr>振り返りを<wbr>通じて、<wbr>一つ<wbr>ずつ<wbr>仕事を<wbr>学んでいきます。',
+      work: '生活の<wbr>お手伝い、<wbr>活動の<wbr>サポート、<wbr>日々の<wbr>記録。<wbr>ご利用者の<wbr>ペースを<wbr>大切に<wbr>しながら、<wbr>チームで<wbr>ケアを<wbr>行います。',
       benefits: ['研修あり', '資格の相談', 'チームでケア'],
       image: '/assets/img/care.webp',
       alt: '高齢者の歩行を支援するスタッフ',
-      schedule: [['09:00', '申し送り・予定の確認'], ['09:30', '生活・活動のサポート'], ['12:00', '交代で休憩'], ['13:00', '活動支援・記録'], ['18:00', '申し送り・退勤']]
+      schedule: [['09:00', '申し送り・<wbr>予定の<wbr>確認'], ['09:30', '生活・<wbr>活動の<wbr>サポート'], ['12:00', '交代で<wbr>休憩'], ['13:00', '活動支援・<wbr>記録'], ['18:00', '申し送り・<wbr>退勤']]
     }
   };
   var jobButtons = Array.prototype.slice.call(document.querySelectorAll('[data-job]'));
@@ -119,10 +121,10 @@
           b.setAttribute('aria-pressed', String(b === button));
         });
         byId('sample-company').textContent = job.company;
-        byId('sample-catch').textContent = job.catch;
+        byId('sample-catch').innerHTML = job.catch;
         byId('sample-title').innerHTML = job.title;
-        byId('sample-intro').textContent = job.intro;
-        byId('sample-work').textContent = job.work;
+        byId('sample-intro').innerHTML = job.intro;
+        byId('sample-work').innerHTML = job.work;
         var photo = byId('sample-photo');
         photo.src = job.image;
         photo.alt = job.alt;
@@ -135,7 +137,8 @@
           var p = document.createElement('p');
           var b = document.createElement('b');
           b.textContent = row[0];
-          p.append(b, document.createTextNode(row[1]));
+          p.append(b);
+          p.insertAdjacentHTML('beforeend', row[1]);
           return p;
         }));
         applyInfo.hidden = true;

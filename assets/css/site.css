@@ -18,7 +18,7 @@ header{gap:20px}nav{gap:24px}.monthly-timeline{display:grid;grid-template-column
 
 /* ---- 移植時の追加：改行の調整 ----
    見出しや説明文で「す。」など1〜2文字だけが次の行に残らないようにする（未対応ブラウザでは従来どおりの改行） */
-h1,h2,h3,h4,summary,.lead,.big-body,.description{text-wrap:balance;word-break:auto-phrase}
+h1,h2,h3,h4,summary,.lead,.big-body,.description{text-wrap:balance}
 p,li,dd,small{text-wrap:pretty}
 
 /* ---- 移植時の追加：下層ページに置いたトップと同じ部品（料金カード・診断の例） ----
@@ -34,3 +34,42 @@ p,li,dd,small{text-wrap:pretty}
 #form-result p{margin:0}
 #form-result:focus{outline:none}
 .footer-privacy{display:block;margin-top:8px;text-decoration:underline}
+
+/* ---- 改行：文節の区切りでだけ折り返す ----
+   HTMLには文節ごとに <wbr> を入れてある（docs/tools/phrase-breaks.mjs で生成）。
+   keep-all で文字の途中の折り返しを止め、<wbr>・句読点・空白の位置でだけ改行する。
+   Chrome だけでなく Safari・Firefox でも同じ位置で折れる。
+   文節1つが枠より長い場合だけ、はみ出さないよう途中で折る（overflow-wrap） */
+body{word-break:keep-all;overflow-wrap:break-word;line-break:strict}
+input,textarea{word-break:normal}
+.strip-title .eyebrow,.path-card small{white-space:nowrap}
+
+/* ---- 文字サイズ：タブレット幅（〜1100px）とスマホ幅（〜760px）の見出しを抑える ---- */
+@media(max-width:1100px){
+h2{font-size:clamp(25px,3vw,32px)}
+.industry-section h2,.faq h2{font-size:27px}
+.contact-section h2{font-size:clamp(27px,3.2vw,34px)}
+.diagnosis-grid h2,.about-section h2{font-size:clamp(25px,2.8vw,30px)}
+.big-body{font-size:21px}
+.service-row h3{font-size:20px}
+.strip-title h2{font-size:18px}
+}
+@media(max-width:760px){
+h1{font-size:clamp(31px,9.4vw,38px)}
+h2,.faq h2,.diagnosis-grid h2,.about-section h2,.industry-section h2{font-size:clamp(21px,6.2vw,25px)}
+.contact-section h2{font-size:clamp(23px,6.8vw,28px)}
+.strip-title h2{font-size:18px}
+.hero-copy .lead{font-size:16px}
+.big-body{font-size:18px}
+.service-row h3{font-size:19px}
+.monthly-timeline h3{font-size:18px}
+.pricing-grid h3{font-size:19px}
+.price{font-size:32px}
+.contract-block h3,.detail-pricing .contract-block h3{font-size:19px}
+.diagnosis-sheet h3{font-size:21px}
+.detail-hero h1{font-size:clamp(22px,6.4vw,26px)}
+.detail-body>section>h2,.page-cta h2{font-size:20px}
+.detail-entry h3,.guide-card h3{font-size:18px}
+}
+/* 幅の狭い端末（320pxなど）で、スマホ型デモの枠が画面からはみ出さないようにする */
+@media(max-width:760px){.demo-grid{grid-template-columns:minmax(0,1fr)}}
