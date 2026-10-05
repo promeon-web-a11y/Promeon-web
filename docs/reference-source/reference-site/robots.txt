@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://promeonweb-recruit.satokazu-promeon.chatgpt.site/sitemap.xml

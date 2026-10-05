@@ -1,16 +1,69 @@
-# PromeonWeb 採用LP
+# PromeonWeb
 
-建設・設備工事会社（従業員5〜30名）向けの「AI採用スターターパック」の販売検証用LPです。
-ビルド不要の静的サイトなので、フォルダごとアップロードすれば公開できます。
+ビルド不要の静的サイトです。
+
+## 0. リニューアル後のサイト（2026-10-05・9ページ）
+
+トップ（`/`）を、業種不問の「採用サイト制作・採用SEO・運用支援」のサイトに置き換えました。
+`docs/reference-source/`（ChatGPTで制作した参考ソース）を、このプロジェクトの構成に合わせて移植したものです。
+
+| URL | ファイル |
+|---|---|
+| `/` | `index.html` |
+| `/services/recruitment-site/` | `services/recruitment-site/index.html` |
+| `/services/recruitment-seo/` | `services/recruitment-seo/index.html` |
+| `/pricing/` | `pricing/index.html` |
+| `/diagnosis/` | `diagnosis/index.html` |
+| `/guides/` | `guides/index.html` |
+| `/guides/recruitment-seo/` ほか2記事 | `guides/*/index.html` |
 
 ```
-index.html              LP本体（全11セクション）
-privacy.html            プライバシーポリシー
+assets/css/site.css          9ページ共通のスタイル
+assets/js/site.js            スマホメニュー・検索タブ・スマホ型デモ・診断フォーム
+assets/img/team.jpg ほか     写真（出典は各ページのフッターに記載）
+assets/img/favicon-site.svg  9ページ用のファビコン
+docs/                        資料用（.vercelignore で公開対象から除外）
+  screenshots/               保存用スクリーンショットと再撮影スクリプト
+  reference-source/          参考ソース（解凍したもの）
+  legacy/index-kensetu-lp.html  置き換え前のトップ（建設・設備工事会社向けLP）
+```
+
+- **ローカルで確認**：`node docs/screenshots/capture.mjs --serve` を実行し、`http://localhost:8000/` を開きます。
+- **診断フォーム**：既存の Google Apps Script 受付に `service=recruit` で送信します（送信先は `assets/js/site.js` の `GAS_ENDPOINT`）。スプレッドシートの「採用Web診断申込」シートに記録し、通知メールと自動返信（5営業日以内の案内）を送ります。
+- **Apps Script は更新済み**（2026-10-05、既存デプロイをバージョン2に更新。URLは変更なし）。`gas/form-handler.gs` を変更したときは、Apps Script エディタに貼り付けて保存し、**デプロイを管理 → 編集 → バージョン：新バージョン → デプロイ**で反映します（「新しいデプロイ」はURLが変わるので使わない）。
+- **フォームの表示**：Apps Script の応答は画面側で読めないため、受付の成功・失敗は画面では判定していません。送信後は「送信処理を行いました。受付が完了すると…確認メールが届きます」と表示し、受付完了とは断定しません。
+- **プライバシーポリシー**：`privacy.html` を9ページと同じデザインにし、実際の受付・保存方法に合わせて更新しました（旧版は `docs/legacy/privacy-old.html`）。全ページのフッターとフォームからリンクしています。制定日・改定日は公開日に合わせて確認してください。
+- **OGP画像**：`assets/img/ogp.png`（1200×630）。元データは `docs/ogp/ogp.html`、作り直しは `node docs/screenshots/capture.mjs --ogp`。
+- **未決定・未連携のもの**：税込・税別の区分、GA4（9ページには計測タグを入れていません）。Search Console は公開後に sitemap を再送信してください。
+- **`/sns-kensetu/`**：作業中のため sitemap から外しています。Git に追加（コミット）すると公開されます。
+- **スマホ型デモの企業・スケジュールは架空の制作サンプル**です。実績として掲載しないでください。
+- 9ページの canonical / OG / JSON-LD / sitemap は `https://promeon-web.vercel.app/` です。独自ドメインに移す場合は一括で置換してください。
+
+以下は、リニューアル前から残している建設・設備工事会社向けLPの説明です。
+`/sns-kensetu/`・`privacy.html`・`sample/`・`gas/` は変更せずに残しています（トップだけ `docs/legacy/` に退避）。
+
+---
+
+# （旧）PromeonWeb 採用LP
+
+建設・設備工事会社向けの販売検証用LPです（2サービス）。
+ビルド不要の静的サイトなので、フォルダごとアップロードすれば公開できます。
+
+- `/` … 採用ページ制作「採用スターターパック」（従業員5〜30名向け）
+- `/sns-kensetu/` … SNS採用設計・運用支援「Promeon SNS採用スタート」（北海道・従業員5〜50名向け）→ 詳細は「6. SNS採用LP」
+
+```
+index.html              採用ページ制作LP（全11セクション）
+sns-kensetu/index.html  SNS採用LP（全12セクション＋診断フォーム）
+sns-kensetu/sns.css     SNS採用LPだけで使う部品のスタイル（共通は style.css）
+privacy.html            プライバシーポリシー（両LP共通）
 sample/index.html       制作例のデモ採用ページ（架空の会社）
 sample/sample.css       デモページ専用のスタイル
-assets/css/style.css    LPのスタイル
-assets/js/main.js       設定値・フォーム送信・計測・スマホ固定CTA
-gas/form-handler.gs     フォーム受付用 Google Apps Script
+assets/css/style.css    LPの共通スタイル
+assets/js/main.js       設定値・フォーム送信・計測・スマホ固定CTA（両LP共通）
+assets/img/favicon.svg  ファビコン
+gas/form-handler.gs     フォーム受付用 Google Apps Script（両LP共通）
+robots.txt / sitemap.xml
 ```
 
 ---
@@ -92,8 +145,11 @@ LPに次の内容を書いています。実際の運用と違う場合は修正
 
 | イベント名 | 内容 | パラメータ |
 |---|---|---|
-| `cta_click` | CTAボタンのクリック | `cta_position`：`header` / `hero` / `journey` / `sample-open` / `sticky` |
-| `generate_lead` | 診断フォームの送信 | `form`：`diagnosis` |
+| `cta_click` | CTAボタンのクリック | `cta_position`：`header` / `hero` / `journey` / `sample-open` / `sticky`（SNS採用LPは `header` / `hero` / `route` / `price` / `sticky`） |
+| `form_view` | 診断フォームが初めて画面に入った（フォーム到達） | `form`：`diagnosis` / `sns_diagnosis` |
+| `generate_lead` | 診断フォームの送信 | `form`：`diagnosis`（採用ページ制作LP） / `sns_diagnosis`（SNS採用LP） |
+
+LP閲覧は GA4 標準の `page_view` で、ページのパス（`/` と `/sns-kensetu/`）で区別できます。
 
 どの位置のボタンから申し込みが多いかを見て、訴求を改善してください。
 
@@ -106,3 +162,29 @@ LPに次の内容を書いています。実際の運用と違う場合は修正
 - どちらも会社名・人物・数値・電話番号（011-000-0000）はすべて**架空**です。ページ上部とフッターに「制作サンプル」と明記し、検索エンジンに載らないよう `noindex` を設定しています。
 - 写真の部分は「PHOTO」ラベル付きの差し込み枠です。営業では「ここに御社の現場写真が入ります」と説明できます。
 - 応募フォームは送信されません（完了表示のみ）。
+
+---
+
+## 6. SNS採用LP（/sns-kensetu/）
+
+### 公開の順番（重要）
+フォームは既存と同じ GAS に送り、`service=sns` で振り分けます。**GAS を更新する前に LP を公開すると、SNS診断の申込が「診断申込」シートに入り、採用Web診断の自動返信が届いてしまいます。** 必ず次の順番で公開してください。
+
+1. `gas/form-handler.gs` の中身を Apps Script エディタに貼り付けて保存
+2. **デプロイを管理 → 編集 → バージョン：新バージョン → デプロイ**（URLは変わりません。「新しいデプロイ」は使わない）
+3. SNS採用LPのフォームからテスト送信し、次の3点を確認
+   - スプレッドシートに「SNS診断申込」シートができて1行追加される
+   - 件名「【SNS採用診断の申込】」の通知メールが届く
+   - 件名「無料SNS採用診断のお申し込みを受け付けました」の自動返信が届く
+4. 既存LP（/）からもテスト送信し、従来どおり「診断申込」シートに入ることを確認
+5. LPを公開（main にマージ）
+
+### 運用方針として確認が必要な記載（HTMLに `【要確認】` コメントあり）
+- 診断結果の返信目安：**3営業日以内**（完了メッセージ、GAS の `REPLY_DAYS_TEXT` と共通）
+- 現状ヒアリング：**30分・オンライン**（導入の流れ）
+- 4ヶ月目以降：**1ヶ月ごとに継続・終了を選べる**（料金・FAQ）
+- Instagramのログイン情報は**お預かりしない**／投稿は企業側（FAQ）
+- 北海道中心・道外もオンラインで相談可（FAQ）
+
+### 写真について
+現在は写真を使わず、図とテキストで構成しています。実際の現場写真を使う場合は `assets/img/` に置いて差し替えてください。架空の人物のAI生成画像は、実在の社員や導入事例に見えるため使わない方針です。

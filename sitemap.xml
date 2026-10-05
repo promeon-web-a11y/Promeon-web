@@ -3,4 +3,28 @@
   <url>
     <loc>https://promeon-web.vercel.app/</loc>
   </url>
+  <url>
+    <loc>https://promeon-web.vercel.app/services/recruitment-site/</loc>
+  </url>
+  <url>
+    <loc>https://promeon-web.vercel.app/services/recruitment-seo/</loc>
+  </url>
+  <url>
+    <loc>https://promeon-web.vercel.app/pricing/</loc>
+  </url>
+  <url>
+    <loc>https://promeon-web.vercel.app/diagnosis/</loc>
+  </url>
+  <url>
+    <loc>https://promeon-web.vercel.app/guides/</loc>
+  </url>
+  <url>
+    <loc>https://promeon-web.vercel.app/guides/recruitment-seo/</loc>
+  </url>
+  <url>
+    <loc>https://promeon-web.vercel.app/guides/recruitment-content/</loc>
+  </url>
+  <url>
+    <loc>https://promeon-web.vercel.app/guides/recruitment-operation/</loc>
+  </url>
 </urlset>

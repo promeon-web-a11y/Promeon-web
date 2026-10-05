@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>OGP画像の元データ（1200×630）</title>
+<!-- SNSでURLを共有したときの画像の元データです。資料用で、サイトとしては公開しません。
+     文言を変えたら、次のコマンドで assets/img/ogp.png を作り直します。
+       node docs/screenshots/capture.mjs --ogp -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { width: 1200px; height: 630px; overflow: hidden; background: #fff; color: #101c20; font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif; display: grid; grid-template-columns: 52% 48%; }
+  .art { display: flex; flex-direction: column; justify-content: center; padding-left: 40px; overflow: hidden; }
+  .photo-type { font-family: Arial, Helvetica, sans-serif; font-weight: 900; font-size: 122px; line-height: .9; letter-spacing: -6px; color: transparent; background: url('/assets/img/team.jpg') center 38% / cover; -webkit-background-clip: text; background-clip: text; }
+  .photo-type span { display: block; }
+  .copy { display: flex; flex-direction: column; justify-content: center; padding: 0 64px 0 44px; }
+  .eyebrow { font: 13px Arial, sans-serif; letter-spacing: .22em; color: #687277; margin: 0 0 26px; }
+  h1 { font-size: 62px; line-height: 1.38; font-weight: 500; letter-spacing: -.03em; margin: 0 0 30px; }
+  h1 em { font-style: normal; border-bottom: 3px solid #75a798; }
+  .service { font-size: 21px; font-weight: 600; color: #0b3d35; margin: 0 0 14px; }
+  .note { font-size: 17px; color: #5f696e; margin: 0; }
+  .bar { position: absolute; left: 0; right: 0; bottom: 0; height: 14px; background: #0b3d35; }
+</style>
+</head>
+<body>
+  <div class="art">
+    <div class="photo-type"><span>Promeon</span><span>Web</span></div>
+  </div>
+  <div class="copy">
+    <p class="eyebrow">YOUR RECRUITMENT PARTNER</p>
+    <h1>採用を、<br>会社の<em>資産</em>に。</h1>
+    <p class="service">採用サイト制作・採用SEO・運用支援</p>
+    <p class="note">全国オンライン対応｜PromeonWeb</p>
+  </div>
+  <div class="bar"></div>
+</body>
+</html>
