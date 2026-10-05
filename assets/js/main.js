@@ -76,30 +76,42 @@ const CONFIG = {
     so.observe(diagnosis);
   }
 
-  /* ---------- 診断フォーム ---------- */
+  /* ---------- 診断フォーム ----------
+     必須項目は HTML の required で判定し、送信項目はフォームの name から組み立てる。
+     フォームごとの違い（送信先シートなど）は hidden の service と data-form-name で区別する */
   const form = document.getElementById('diagnosis-form');
   const done = document.getElementById('form-done');
   if (!form) return;
 
   const statusEl = form.querySelector('.form-status');
   const submitBtn = form.querySelector('button[type="submit"]');
+  const submitLabel = submitBtn.textContent;
+  const formName = form.dataset.formName || 'diagnosis';
   const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  function setError(name, hasError) {
-    const field = form.querySelector('[data-field="' + name + '"]');
-    if (field) field.classList.toggle('has-error', hasError);
-    return hasError;
+  /* フォーム到達の計測（初めて画面に入ったときに1回だけ） */
+  if ('IntersectionObserver' in window) {
+    const fo = new IntersectionObserver(function (entries) {
+      if (entries.some(function (e) { return e.isIntersecting; })) {
+        track('form_view', { form: formName });
+        fo.disconnect();
+      }
+    }, { threshold: 0.2 });
+    fo.observe(form);
   }
 
   function validate() {
     const data = new FormData(form);
-    const errors = [
-      setError('company', !String(data.get('company') || '').trim()),
-      setError('name', !String(data.get('name') || '').trim()),
-      setError('email', !EMAIL_RE.test(String(data.get('email') || '').trim())),
-      setError('industry', !data.get('industry')),
-    ];
-    return !errors.some(Boolean);
+    let ok = true;
+    form.querySelectorAll('[data-field]').forEach(function (field) {
+      const input = field.querySelector('input[required], select[required], textarea[required]');
+      if (!input) return;
+      const value = String(data.get(input.name) || '').trim();
+      const hasError = input.type === 'email' ? !EMAIL_RE.test(value) : !value;
+      field.classList.toggle('has-error', hasError);
+      if (hasError) ok = false;
+    });
+    return ok;
   }
 
   // 入力し直したらエラー表示を消す
@@ -116,7 +128,7 @@ const CONFIG = {
     if (!validate()) {
       statusEl.textContent = '入力内容をご確認ください。';
       statusEl.classList.add('is-error');
-      const firstError = form.querySelector('.has-error input, .has-error textarea');
+      const firstError = form.querySelector('.has-error input, .has-error select, .has-error textarea');
       if (firstError) firstError.focus();
       return;
     }
@@ -136,15 +148,12 @@ const CONFIG = {
       return;
     }
 
+    // 複数選択（チェックボックス）は " / " でつなげて1項目にする
     const body = new URLSearchParams();
-    body.append('company', String(data.get('company')).trim());
-    body.append('name', String(data.get('name')).trim());
-    body.append('email', String(data.get('email')).trim());
-    body.append('tel', String(data.get('tel') || '').trim());
-    body.append('industry', String(data.get('industry') || ''));
-    body.append('url', String(data.get('url') || '').trim());
-    body.append('concerns', data.getAll('concerns').join(' / '));
-    body.append('message', String(data.get('message') || '').trim());
+    new Set(data.keys()).forEach(function (key) {
+      if (key === 'website') return;
+      body.append(key, data.getAll(key).map(function (v) { return String(v).trim(); }).join(' / '));
+    });
     body.append('page', location.href);
     body.append('website', '');
 
@@ -160,14 +169,14 @@ const CONFIG = {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
         body: body.toString(),
       });
-      track('generate_lead', { form: 'diagnosis' });
+      track('generate_lead', { form: formName });
       showDone();
     } catch (err) {
       console.error(err);
       statusEl.textContent = '送信できませんでした。通信環境をご確認のうえ、もう一度お試しいただくか、' + CONFIG.CONTACT_EMAIL + ' までメールでご連絡ください。';
       statusEl.classList.add('is-error');
       submitBtn.disabled = false;
-      submitBtn.textContent = '無料で採用ページを診断する';
+      submitBtn.textContent = submitLabel;
     }
   });
 
