@@ -462,7 +462,7 @@ async function makeOgp() {
     await tab.goto(local.base + '/docs/ogp/ogp.html');
     await tab.run(async () => {
       await document.fonts.ready;
-      await new Promise((r) => { const img = new Image(); img.onload = img.onerror = r; img.src = '/assets/img/team.jpg'; });
+      await new Promise((r) => { const img = new Image(); img.onload = img.onerror = r; img.src = '/docs/reference-source/reference-site/assets/team.jpg'; });
       await new Promise((r) => setTimeout(r, 500));
     });
     const file = path.join(ROOT, 'assets', 'img', 'ogp.png');
