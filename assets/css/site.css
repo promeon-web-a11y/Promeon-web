@@ -55,16 +55,16 @@ h2{font-size:clamp(25px,3vw,32px)}
 .strip-title h2{font-size:18px}
 }
 @media(max-width:760px){
-h1{font-size:clamp(31px,9.4vw,38px)}
-h2,.faq h2,.diagnosis-grid h2,.about-section h2,.industry-section h2{font-size:clamp(21px,6.2vw,25px)}
-.contact-section h2{font-size:clamp(23px,6.8vw,28px)}
+h1{font-size:clamp(28px,8.2vw,34px)}
+h2,.faq h2,.diagnosis-grid h2,.about-section h2,.industry-section h2{font-size:clamp(20px,5.7vw,24px)}
+.contact-section h2{font-size:clamp(21px,6.2vw,26px)}
 .strip-title h2{font-size:18px}
 .hero-copy .lead{font-size:16px}
 .big-body{font-size:18px}
 .service-row h3{font-size:19px}
 .monthly-timeline h3{font-size:18px}
 .pricing-grid h3{font-size:19px}
-.price{font-size:32px}
+.price{font-size:30px}
 .contract-block h3,.detail-pricing .contract-block h3{font-size:19px}
 .diagnosis-sheet h3{font-size:21px}
 .detail-hero h1{font-size:clamp(22px,6.4vw,26px)}
@@ -73,3 +73,46 @@ h2,.faq h2,.diagnosis-grid h2,.about-section h2,.industry-section h2{font-size:c
 }
 /* 幅の狭い端末（320pxなど）で、スマホ型デモの枠が画面からはみ出さないようにする */
 @media(max-width:760px){.demo-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* ---- SEO補強：採用課題のリスト（.industry-section の2列を流用）と「採用SEOとは？」 ---- */
+.challenge-list{list-style:none;padding:0;margin:0}
+.challenge-list li{font-size:15px;line-height:1.8;padding:13px 0;border-bottom:1px solid var(--line)}
+.challenge-list li:first-child{padding-top:0}
+.industry-body .challenge-close{color:var(--ink);margin:22px 0 0;text-wrap:balance}
+.seo-term{font-size:19px;font-weight:500;margin:30px 0 12px}
+.seo-grid>div>p.seo-term-body{font-size:15px;margin-bottom:12px}
+@media(max-width:760px){.challenge-list li{font-size:14px}.seo-term{font-size:17px;margin-top:24px}.seo-grid>div>p.seo-term-body{font-size:14px}}
+
+/* ---- レスポンシブ調整：画面幅に対して文字が大きくなりすぎないようにする ---- */
+/* FAQなどの「＋」は、質問文が2行以上になっても1行目の右端に置く */
+summary:after{top:22px}
+.contact-privacy summary:after{top:12px}
+/* タブレット幅（761〜1100px）：2列のまま、狭い列に合わせて見出しと部品を抑える */
+@media(min-width:761px) and (max-width:1100px){
+h1{font-size:clamp(32px,4.05vw,65px)}
+.pricing-grid .pill{padding:11px 14px;font-size:13px}
+}
+@media(min-width:761px) and (max-width:900px){
+.path-strip{grid-template-columns:1fr;gap:22px}
+.strip-title{display:flex;align-items:center;justify-content:space-between;gap:15px;padding-top:0}
+.strip-title .short-line{display:none}
+.strip-title h2{margin:0}
+.strip-title h2 br{display:none}
+.strip-title .eyebrow{margin:0}
+.start-steps{grid-template-columns:1fr 1fr;gap:28px 30px}
+.demo-grid{gap:40px}
+.demo-copy{padding-left:0}
+.pricing-grid article{padding:24px 16px}
+.price{font-size:30px}
+}
+/* スマホ幅（〜760px）：ファーストビューの写真文字を抑え、コピーとボタンを早く見せる */
+@media(max-width:760px){
+.photo-type{font-size:min(16.5vw,92px)}
+.photo-type .web-word{font-size:min(19.6vw,110px);gap:clamp(14px,4vw,25px)}
+.hero-copy{padding-top:30px}
+.founder-signature strong{font-size:20px}
+}
+/* 幅の狭い端末（〜360px）：「発見›…›採用」を1行に収める */
+@media(max-width:360px){
+.journey{font-size:12.5px;gap:5px;padding:18px 8px;flex-wrap:nowrap}
+}

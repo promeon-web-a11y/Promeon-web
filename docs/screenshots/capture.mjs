@@ -72,6 +72,9 @@ const BASE_ARG = arg('base');
 const OUT = path.resolve(arg('out') || HERE);
 const ONLY = arg('only'); // desktop / mobile / interactions
 const SCALE = Number(arg('scale') || 1); // 2 にすると高精細（画像の横幅も2倍）
+// 画面の横幅を変えて撮る（例：--desktop-width 1024 --mobile-width 320）。試し撮りは --out と併用
+if (arg('desktop-width')) VIEWPORTS.desktop.width = Number(arg('desktop-width'));
+if (arg('mobile-width')) VIEWPORTS.mobile.width = Number(arg('mobile-width'));
 
 /* ---------- ローカル配信（--base を省略したとき） ---------- */
 

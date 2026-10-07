@@ -1,0 +1,200 @@
+{
+  "capturedAt": "2026/10/7 17:40:18 (JST)",
+  "baseUrl": "http://127.0.0.1:61282（スクリプトによる一時ローカル配信）",
+  "browser": "chrome.exe",
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900,
+      "mobile": false
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "mobile": true
+    }
+  },
+  "scale": 1,
+  "results": [
+    {
+      "file": "desktop/01-home-first-view.png",
+      "url": "http://127.0.0.1:61282/",
+      "status": "撮影",
+      "size": "1440×900",
+      "warnings": []
+    },
+    {
+      "file": "desktop/01-home.png",
+      "url": "http://127.0.0.1:61282/",
+      "status": "撮影",
+      "size": "1440×11736",
+      "warnings": []
+    },
+    {
+      "file": "desktop/02-recruitment-site.png",
+      "url": "http://127.0.0.1:61282/services/recruitment-site/",
+      "status": "撮影",
+      "size": "1440×2917",
+      "warnings": []
+    },
+    {
+      "file": "desktop/03-recruitment-seo.png",
+      "url": "http://127.0.0.1:61282/services/recruitment-seo/",
+      "status": "撮影",
+      "size": "1440×2819",
+      "warnings": []
+    },
+    {
+      "file": "desktop/04-pricing.png",
+      "url": "http://127.0.0.1:61282/pricing/",
+      "status": "撮影",
+      "size": "1440×2291",
+      "warnings": []
+    },
+    {
+      "file": "desktop/05-diagnosis.png",
+      "url": "http://127.0.0.1:61282/diagnosis/",
+      "status": "撮影",
+      "size": "1440×2262",
+      "warnings": []
+    },
+    {
+      "file": "desktop/06-guides.png",
+      "url": "http://127.0.0.1:61282/guides/",
+      "status": "撮影",
+      "size": "1440×1335",
+      "warnings": []
+    },
+    {
+      "file": "desktop/07-guide-recruitment-seo.png",
+      "url": "http://127.0.0.1:61282/guides/recruitment-seo/",
+      "status": "撮影",
+      "size": "1440×2955",
+      "warnings": []
+    },
+    {
+      "file": "desktop/08-guide-recruitment-content.png",
+      "url": "http://127.0.0.1:61282/guides/recruitment-content/",
+      "status": "撮影",
+      "size": "1440×3049",
+      "warnings": []
+    },
+    {
+      "file": "desktop/09-guide-recruitment-operation.png",
+      "url": "http://127.0.0.1:61282/guides/recruitment-operation/",
+      "status": "撮影",
+      "size": "1440×2949",
+      "warnings": []
+    },
+    {
+      "file": "mobile/01-home-first-view.png",
+      "url": "http://127.0.0.1:61282/",
+      "status": "撮影",
+      "size": "390×844",
+      "warnings": []
+    },
+    {
+      "file": "mobile/01-home.png",
+      "url": "http://127.0.0.1:61282/",
+      "status": "撮影",
+      "size": "390×17448",
+      "warnings": []
+    },
+    {
+      "file": "mobile/02-recruitment-site.png",
+      "url": "http://127.0.0.1:61282/services/recruitment-site/",
+      "status": "撮影",
+      "size": "390×3418",
+      "warnings": []
+    },
+    {
+      "file": "mobile/03-recruitment-seo.png",
+      "url": "http://127.0.0.1:61282/services/recruitment-seo/",
+      "status": "撮影",
+      "size": "390×3249",
+      "warnings": []
+    },
+    {
+      "file": "mobile/04-pricing.png",
+      "url": "http://127.0.0.1:61282/pricing/",
+      "status": "撮影",
+      "size": "390×3475",
+      "warnings": []
+    },
+    {
+      "file": "mobile/05-diagnosis.png",
+      "url": "http://127.0.0.1:61282/diagnosis/",
+      "status": "撮影",
+      "size": "390×3051",
+      "warnings": []
+    },
+    {
+      "file": "mobile/06-guides.png",
+      "url": "http://127.0.0.1:61282/guides/",
+      "status": "撮影",
+      "size": "390×1908",
+      "warnings": []
+    },
+    {
+      "file": "mobile/07-guide-recruitment-seo.png",
+      "url": "http://127.0.0.1:61282/guides/recruitment-seo/",
+      "status": "撮影",
+      "size": "390×3340",
+      "warnings": []
+    },
+    {
+      "file": "mobile/08-guide-recruitment-content.png",
+      "url": "http://127.0.0.1:61282/guides/recruitment-content/",
+      "status": "撮影",
+      "size": "390×3273",
+      "warnings": []
+    },
+    {
+      "file": "mobile/09-guide-recruitment-operation.png",
+      "url": "http://127.0.0.1:61282/guides/recruitment-operation/",
+      "status": "撮影",
+      "size": "390×3245",
+      "warnings": []
+    },
+    {
+      "file": "interactions/demo-office.png",
+      "url": "http://127.0.0.1:61282/",
+      "label": "スマホ型デモ：事務・オフィス",
+      "status": "撮影",
+      "size": "1440×866",
+      "warnings": []
+    },
+    {
+      "file": "interactions/demo-food-retail.png",
+      "url": "http://127.0.0.1:61282/",
+      "label": "スマホ型デモ：飲食・小売",
+      "status": "撮影",
+      "size": "1440×866",
+      "warnings": []
+    },
+    {
+      "file": "interactions/demo-care-welfare.png",
+      "url": "http://127.0.0.1:61282/",
+      "label": "スマホ型デモ：介護・福祉",
+      "status": "撮影",
+      "size": "1440×866",
+      "warnings": []
+    },
+    {
+      "file": "interactions/faq-open.png",
+      "url": "http://127.0.0.1:61282/",
+      "label": "FAQを開いた状態",
+      "status": "撮影",
+      "size": "1440×872",
+      "warnings": []
+    },
+    {
+      "file": "interactions/mobile-menu-open.png",
+      "url": "http://127.0.0.1:61282/",
+      "label": "スマホメニューを開いた状態",
+      "status": "撮影",
+      "size": "390×844",
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "capturedAt": "2026/10/7 17:42:25 (JST)",
+  "baseUrl": "http://127.0.0.1:61023（スクリプトによる一時ローカル配信）",
+  "browser": "chrome.exe",
+  "viewports": {
+    "desktop": {
+      "width": 1024,
+      "height": 900,
+      "mobile": false
+    },
+    "mobile": {
+      "width": 320,
+      "height": 844,
+      "mobile": true
+    }
+  },
+  "scale": 1,
+  "results": [
+    {
+      "file": "mobile/01-home-first-view.png",
+      "url": "http://127.0.0.1:61023/",
+      "status": "撮影",
+      "size": "320×844",
+      "warnings": []
+    },
+    {
+      "file": "mobile/01-home.png",
+      "url": "http://127.0.0.1:61023/",
+      "status": "撮影",
+      "size": "320×18717",
+      "warnings": []
+    },
+    {
+      "file": "mobile/02-recruitment-site.png",
+      "url": "http://127.0.0.1:61023/services/recruitment-site/",
+      "status": "撮影",
+      "size": "320×3755",
+      "warnings": []
+    },
+    {
+      "file": "mobile/03-recruitment-seo.png",
+      "url": "http://127.0.0.1:61023/services/recruitment-seo/",
+      "status": "撮影",
+      "size": "320×3641",
+      "warnings": []
+    },
+    {
+      "file": "mobile/04-pricing.png",
+      "url": "http://127.0.0.1:61023/pricing/",
+      "status": "撮影",
+      "size": "320×3748",
+      "warnings": []
+    },
+    {
+      "file": "mobile/05-diagnosis.png",
+      "url": "http://127.0.0.1:61023/diagnosis/",
+      "status": "撮影",
+      "size": "320×3221",
+      "warnings": []
+    },
+    {
+      "file": "mobile/06-guides.png",
+      "url": "http://127.0.0.1:61023/guides/",
+      "status": "撮影",
+      "size": "320×2129",
+      "warnings": []
+    },
+    {
+      "file": "mobile/07-guide-recruitment-seo.png",
+      "url": "http://127.0.0.1:61023/guides/recruitment-seo/",
+      "status": "撮影",
+      "size": "320×3792",
+      "warnings": []
+    },
+    {
+      "file": "mobile/08-guide-recruitment-content.png",
+      "url": "http://127.0.0.1:61023/guides/recruitment-content/",
+      "status": "撮影",
+      "size": "320×3735",
+      "warnings": []
+    },
+    {
+      "file": "mobile/09-guide-recruitment-operation.png",
+      "url": "http://127.0.0.1:61023/guides/recruitment-operation/",
+      "status": "撮影",
+      "size": "320×3768",
+      "warnings": []
+    }
+  ]
+}

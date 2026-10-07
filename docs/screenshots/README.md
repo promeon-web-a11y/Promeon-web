@@ -1,3 +1,25 @@
+## SEO補強（トップページ5か所の追加）の記録
+
+| 項目 | 内容 |
+|---|---|
+| 撮影日時 | 2026/10/7 18:09:39 (JST) |
+| 撮影したURL | ローカル配信（本番ではありません） |
+| 変更したページ | トップ（`/`）のみ。採用課題・CONCEPT・採用SEOとは？・SERVICES 01・FAQ 3問 |
+| 参考画像 | `reference/promeon-seo-preview/`（承認済みプレビュー。PC 1024px／スマホ 390px。本番の画面ではありません） |
+| 変更前 | `before-seo-reinforcement/1440-390/`、`before-seo-reinforcement/1024-320/` |
+| 変更後（ページ全体） | `desktop/`・`mobile/`・`interactions/`（1440／390px）、`after-1024-320/`（1024／320px） |
+| 変更後（変更箇所の切り抜き） | `desktop/seo-{1440,1024}-*.png`、`mobile/seo-{390,320}-*.png`（challenges / concept / seo / services / faq / faq-open） |
+
+- 4つの幅（1440・1024・390・320px）で、横はみ出し・コンソールエラー・リンク切れなし
+- FAQ（11問）とレポートの開閉、検索タブ、業種別デモ3種と枠内スクロール、応募の流れの開閉、スマホメニューを確認
+- 問い合わせフォームは送信していません（送信コードは変更なし）
+- 同日に「09 / OUR PURPOSE」の本文差し替え（`desktop/purpose-*.png`・`mobile/purpose-*.png`）とレスポンシブ調整を行い、`desktop/`・`mobile/`・`interactions/`・`after-1024-320/` を撮り直しています。`before-seo-reinforcement/` と `after-1024-320/` はトップページの画像だけを残しています
+- レスポンシブ調整後は、全10ページを 320・360・600・768・900・1024・1440px で確認（横はみ出し・コンソールエラーなし）
+- 以下の「画像一覧」のページ全体の縦サイズは 2026/10/5 時点のものです。最新は `last-run.json` を参照してください
+- 幅を変えて撮るとき：`node docs/screenshots/capture.mjs --out 保存先 --desktop-width 1024 --mobile-width 320`
+
+---
+
 390×844| 項目 | 内容 |
 |---|---|
 | 撮影日時 | 2026/10/5 19:06:15 (JST) |
