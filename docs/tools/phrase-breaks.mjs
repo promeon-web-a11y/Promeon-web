@@ -35,6 +35,7 @@ const FILES = [
   'services/recruitment-seo/index.html',
   'pricing/index.html',
   'diagnosis/index.html',
+  'demo/index.html',
   'guides/index.html',
   'guides/recruitment-seo/index.html',
   'guides/recruitment-content/index.html',

@@ -42,6 +42,7 @@ const PAGES = [
   { name: '04-pricing', path: '/pricing/' },
   { name: '05-diagnosis', path: '/diagnosis/' },
   { name: '06-guides', path: '/guides/' },
+  { name: '10-demo', path: '/demo/' },
   { name: '07-guide-recruitment-seo', path: '/guides/recruitment-seo/' },
   { name: '08-guide-recruitment-content', path: '/guides/recruitment-content/' },
   { name: '09-guide-recruitment-operation', path: '/guides/recruitment-operation/' },

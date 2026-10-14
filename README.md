@@ -16,6 +16,7 @@
 | `/diagnosis/` | `diagnosis/index.html` |
 | `/guides/` | `guides/index.html` |
 | `/guides/recruitment-seo/` ほか2記事 | `guides/*/index.html` |
+| `/demo/`（採用ページデモ・準備中） | `demo/index.html` |
 
 ```
 assets/css/site.css          9ページ共通のスタイル
@@ -33,6 +34,8 @@ docs/                        資料用（.vercelignore で公開対象から除�
 - **診断フォーム**：既存の Google Apps Script 受付に `service=recruit` で送信します（送信先は `assets/js/site.js` の `GAS_ENDPOINT`）。スプレッドシートの「採用Web診断申込」シートに記録し、通知メールと自動返信（5営業日以内の案内）を送ります。
 - **Apps Script は更新済み**（2026-10-05、既存デプロイをバージョン2に更新。URLは変更なし）。`gas/form-handler.gs` を変更したときは、Apps Script エディタに貼り付けて保存し、**デプロイを管理 → 編集 → バージョン：新バージョン → デプロイ**で反映します（「新しいデプロイ」はURLが変わるので使わない）。
 - **フォームの表示**：Apps Script の応答は画面側で読めないため、受付の成功・失敗は画面では判定していません。送信後は「送信処理を行いました。受付が完了すると…確認メールが届きます」と表示し、受付完了とは断定しません。
+- **採用ページデモ（`/demo/`）**：現在は「準備中」表示。`noindex` にして sitemap には入れていません。デモが完成したら `noindex` を外し、sitemap に追加してください。
+- **無料相談**：Googleフォーム（5分程度のヒアリング）へのリンクです。トップの診断欄・申込欄・料金カード、料金ページの料金カード、診断ページの5か所に置いています。フォームのURLを変えたら、まとめて置換してください。回答はGoogleフォーム側で確認します（Apps Script・スプレッドシートの受付とは別）。
 - **プライバシーポリシー**：`privacy.html` を9ページと同じデザインにし、実際の受付・保存方法に合わせて更新しました（旧版は `docs/legacy/privacy-old.html`）。全ページのフッターとフォームからリンクしています。制定日・改定日は公開日に合わせて確認してください。
 - **OGP画像**：`assets/img/ogp.png`（1200×630）。元データは `docs/ogp/ogp.html`、作り直しは `node docs/screenshots/capture.mjs --ogp`。
 - **未決定・未連携のもの**：税込・税別の区分、GA4（9ページには計測タグを入れていません）。Search Console は公開後に sitemap を再送信してください。

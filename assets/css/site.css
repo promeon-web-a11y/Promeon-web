@@ -128,3 +128,5 @@ h1{font-size:clamp(32px,4.05vw,65px)}
 .pricing-custom .reference{display:block;margin-top:0}
 @media(max-width:1100px){.pricing-custom>*{padding:25px 20px}}
 @media(max-width:760px){.pricing-custom{grid-template-columns:1fr}.pricing-custom>*{padding:0 28px}.pricing-custom>:first-child{padding-top:28px}.pricing-custom>:last-child{padding-bottom:28px}.pricing-custom .price{font-size:22px;margin:12px 0}.pricing-custom .price br{display:none}}
+
+.consult-box{margin-top:28px;padding:20px 22px;border:1px solid var(--line);background:#fff}.consult-box strong{display:block;font-size:15px;font-weight:600;color:var(--green);margin-bottom:6px}.consult-box p{font-size:14px;color:var(--muted);margin-bottom:10px}.consult-box.on-dark{background:#ffffff0a;border-color:#638276}.consult-box.on-dark strong,.consult-box.on-dark .text-link{color:#fff}.consult-box.on-dark p{color:#d0ded6}.consult-link{display:block;text-align:center;margin-top:14px;font-size:13px}
