@@ -116,3 +116,15 @@ h1{font-size:clamp(32px,4.05vw,65px)}
 @media(max-width:360px){
 .journey{font-size:12.5px;gap:5px;padding:18px 8px;flex-wrap:nowrap}
 }
+
+/* ---- 料金：採用ページ制作の「初期費用」表記と、HP全体制作（個別見積もり）の枠 ---- */
+.price>small{display:block;font:13px/1.6 sans-serif;letter-spacing:0;color:var(--muted);margin-bottom:2px}
+.pricing-custom{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border:1px solid var(--line);border-top:0}
+.pricing-custom>*{padding:28px 32px;margin:0}
+.pricing-custom h3{font-size:20px;font-weight:500;margin:0}
+.pricing-custom .price-label{display:block;margin-bottom:10px}
+.pricing-custom .price{font:500 24px/1.5 sans-serif;letter-spacing:-.02em;align-self:center}
+.pricing-custom p:not(.price){font-size:14px;color:var(--muted);margin-bottom:14px}
+.pricing-custom .reference{display:block;margin-top:0}
+@media(max-width:1100px){.pricing-custom>*{padding:25px 20px}}
+@media(max-width:760px){.pricing-custom{grid-template-columns:1fr}.pricing-custom>*{padding:0 28px}.pricing-custom>:first-child{padding-top:28px}.pricing-custom>:last-child{padding-bottom:28px}.pricing-custom .price{font-size:22px;margin:12px 0}.pricing-custom .price br{display:none}}
